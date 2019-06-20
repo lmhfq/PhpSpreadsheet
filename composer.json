@@ -7,6 +7,10 @@
     "license": "LGPL-2.1-or-later",
     "authors": [
         {
+            "name": "lmh",
+            "homepage": ""
+        },
+        {
             "name": "Maarten Balliauw",
             "homepage": "https://blog.maartenballiauw.be"
         },
