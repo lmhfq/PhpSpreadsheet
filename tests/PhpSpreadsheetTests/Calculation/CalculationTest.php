@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Calculation;
+namespace Wya\PhpSpreadsheetTests\Calculation;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\Spreadsheet;
 use PHPUnit\Framework\TestCase;
 
 class CalculationTest extends TestCase

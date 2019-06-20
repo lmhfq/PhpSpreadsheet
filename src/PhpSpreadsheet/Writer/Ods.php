@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer;
+namespace Wya\PhpSpreadsheet\Writer;
 
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Content;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Meta;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\MetaInf;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Mimetype;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Settings;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Styles;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Thumbnails;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Writer\Ods\Content;
+use Wya\PhpSpreadsheet\Writer\Ods\Meta;
+use Wya\PhpSpreadsheet\Writer\Ods\MetaInf;
+use Wya\PhpSpreadsheet\Writer\Ods\Mimetype;
+use Wya\PhpSpreadsheet\Writer\Ods\Settings;
+use Wya\PhpSpreadsheet\Writer\Ods\Styles;
+use Wya\PhpSpreadsheet\Writer\Ods\Thumbnails;
 use ZipArchive;
 
 class Ods extends BaseWriter

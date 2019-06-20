@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Custom;
+namespace Wya\PhpSpreadsheetTests\Custom;
 
 use Complex\Complex;
 

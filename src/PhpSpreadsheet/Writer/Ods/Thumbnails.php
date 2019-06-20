@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Ods;
+namespace Wya\PhpSpreadsheet\Writer\Ods;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class Thumbnails extends WriterPart
 {

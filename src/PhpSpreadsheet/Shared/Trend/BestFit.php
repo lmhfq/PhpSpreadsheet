@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\Trend;
+namespace Wya\PhpSpreadsheet\Shared\Trend;
 
 class BestFit
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Shared;
+namespace Wya\PhpSpreadsheetTests\Shared;
 
-use PhpOffice\PhpSpreadsheet\Exception;
-use PhpOffice\PhpSpreadsheet\Shared\CodePage;
+use Wya\PhpSpreadsheet\Exception;
+use Wya\PhpSpreadsheet\Shared\CodePage;
 use PHPUnit\Framework\TestCase;
 
 class CodePageTest extends TestCase

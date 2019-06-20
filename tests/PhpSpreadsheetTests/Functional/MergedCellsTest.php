@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Functional;
+namespace Wya\PhpSpreadsheetTests\Functional;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class MergedCellsTest extends AbstractFunctional
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer;
+namespace Wya\PhpSpreadsheet\Writer;
 
 abstract class BaseWriter implements IWriter
 {

@@ -16,7 +16,7 @@ To enable cell caching, you must provide your own implementation of cache like s
 ``` php
 $cache = new MyCustomPsr16Implementation();
 
-\PhpOffice\PhpSpreadsheet\Settings::setCache($cache);
+\Wya\PhpSpreadsheet\Settings::setCache($cache);
 ```
 
 ## Language/Locale
@@ -27,7 +27,7 @@ Portuguese you would use:
 
 ``` php
 $locale = 'pt_br';
-$validLocale = \PhpOffice\PhpSpreadsheet\Settings::setLocale($locale);
+$validLocale = \Wya\PhpSpreadsheet\Settings::setLocale($locale);
 if (!$validLocale) {
     echo 'Unable to set locale to ' . $locale . " - reverting to en_us" . PHP_EOL;
 }

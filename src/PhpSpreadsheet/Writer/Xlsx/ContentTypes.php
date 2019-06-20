@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+namespace Wya\PhpSpreadsheet\Writer\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\MemoryDrawing;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\MemoryDrawing;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 class ContentTypes extends WriterPart
 {
@@ -124,7 +124,7 @@ class ContentTypes extends WriterPart
             $extension = '';
             $mimeType = '';
 
-            if ($this->getParentWriter()->getDrawingHashTable()->getByIndex($i) instanceof \PhpOffice\PhpSpreadsheet\Worksheet\Drawing) {
+            if ($this->getParentWriter()->getDrawingHashTable()->getByIndex($i) instanceof \Wya\PhpSpreadsheet\Worksheet\Drawing) {
                 $extension = strtolower($this->getParentWriter()->getDrawingHashTable()->getByIndex($i)->getExtension());
                 $mimeType = $this->getImageMimeType($this->getParentWriter()->getDrawingHashTable()->getByIndex($i)->getPath());
             } elseif ($this->getParentWriter()->getDrawingHashTable()->getByIndex($i) instanceof MemoryDrawing) {

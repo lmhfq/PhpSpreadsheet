@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+namespace Wya\PhpSpreadsheet\Reader\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Document\Properties as DocumentProperties;
-use PhpOffice\PhpSpreadsheet\Reader\Security\XmlScanner;
-use PhpOffice\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\Document\Properties as DocumentProperties;
+use Wya\PhpSpreadsheet\Reader\Security\XmlScanner;
+use Wya\PhpSpreadsheet\Settings;
 
 class Properties
 {

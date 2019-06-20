@@ -8,7 +8,7 @@
 
 PhpSpreadsheet relies on Composer autoloader. So before working with
 PhpSpreadsheet in standalone, be sure to run `composer install`. Or add it to a
-pre-existing project with `composer require phpoffice/phpspreadsheet`.
+pre-existing project with `composer require Wya/phpspreadsheet`.
 
 ## Spreadsheet in memory
 
@@ -32,8 +32,8 @@ By default, the PhpSpreadsheet package provides some readers and
 writers, including one for the Open XML spreadsheet format (a.k.a. Excel
 2007 file format). You are not limited to the default readers and
 writers, as you are free to implement the
-`\PhpOffice\PhpSpreadsheet\Reader\IReader` and
-`\PhpOffice\PhpSpreadsheet\Writer\IWriter` interface in a custom class.
+`\Wya\PhpSpreadsheet\Reader\IReader` and
+`\Wya\PhpSpreadsheet\Writer\IWriter` interface in a custom class.
 
 ![02-readers-writers.png](./images/02-readers-writers.png "Readers/Writers")
 

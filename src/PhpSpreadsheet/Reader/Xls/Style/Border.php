@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader\Xls\Style;
+namespace Wya\PhpSpreadsheet\Reader\Xls\Style;
 
-use PhpOffice\PhpSpreadsheet\Style\Border as StyleBorder;
+use Wya\PhpSpreadsheet\Style\Border as StyleBorder;
 
 class Border
 {

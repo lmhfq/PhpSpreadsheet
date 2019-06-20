@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\RichText;
+namespace Wya\PhpSpreadsheet\RichText;
 
-use PhpOffice\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Style\Font;
 
 class Run extends TextElement implements ITextElement
 {
@@ -28,7 +28,7 @@ class Run extends TextElement implements ITextElement
     /**
      * Get font.
      *
-     * @return null|\PhpOffice\PhpSpreadsheet\Style\Font
+     * @return null|\Wya\PhpSpreadsheet\Style\Font
      */
     public function getFont()
     {

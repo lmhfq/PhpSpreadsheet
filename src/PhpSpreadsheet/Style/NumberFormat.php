@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Style;
+namespace Wya\PhpSpreadsheet\Style;
 
-use PhpOffice\PhpSpreadsheet\Calculation\MathTrig;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Calculation\MathTrig;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
 
 class NumberFormat extends Supervisor
 {

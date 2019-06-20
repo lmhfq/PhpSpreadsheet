@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 class ReferenceHelper
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Writer\Xlsx;
+namespace Wya\PhpSpreadsheetTests\Writer\Xlsx;
 
 use Exception;
-use PhpOffice\PhpSpreadsheet\Settings;
-use PhpOffice\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\Shared\File;
 use PHPUnit\Framework\TestCase;
 use ZipArchive;
 
@@ -18,12 +18,12 @@ class UnparsedDataTest extends TestCase
         $sampleFilename = './data/Writer/XLSX/form_pass_print.xlsm';
         $resultFilename = tempnam(File::sysGetTempDir(), 'phpspreadsheet-test');
         Settings::setLibXmlLoaderOptions(null); // reset to default options
-        $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+        $reader = new \Wya\PhpSpreadsheet\Reader\Xlsx();
         $excel = $reader->load($sampleFilename);
 
         $excel->getSheet(1)->setCellValue('B1', '222');
 
-        $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($excel);
+        $writer = new \Wya\PhpSpreadsheet\Writer\Xlsx($excel);
         $writer->save($resultFilename);
         self::assertFileExists($resultFilename);
 

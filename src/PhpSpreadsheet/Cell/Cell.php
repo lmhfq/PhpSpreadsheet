@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Cell;
+namespace Wya\PhpSpreadsheet\Cell;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Collection\Cells;
-use PhpOffice\PhpSpreadsheet\Exception;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
-use PhpOffice\PhpSpreadsheet\Style\Style;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Collection\Cells;
+use Wya\PhpSpreadsheet\Exception;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Style\Style;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 class Cell
 {
@@ -271,7 +271,7 @@ class Cell
                     return $this->calculatedValue; // Fallback for calculations referencing external files.
                 }
 
-                throw new \PhpOffice\PhpSpreadsheet\Calculation\Exception(
+                throw new \Wya\PhpSpreadsheet\Calculation\Exception(
                     $this->getWorksheet()->getTitle() . '!' . $this->getCoordinate() . ' -> ' . $ex->getMessage()
                 );
             }

@@ -1,7 +1,7 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\NamedRange;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\NamedRange;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../Header.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader\Xls;
+namespace Wya\PhpSpreadsheet\Reader\Xls;
 
 class ErrorCode
 {

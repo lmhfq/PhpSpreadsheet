@@ -1,20 +1,20 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader;
+namespace Wya\PhpSpreadsheet\Reader;
 
 use DateTime;
 use DateTimeZone;
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Document\Properties;
-use PhpOffice\PhpSpreadsheet\Reader\Security\XmlScanner;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Settings;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Document\Properties;
+use Wya\PhpSpreadsheet\Reader\Security\XmlScanner;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
 use XMLReader;
 use ZipArchive;
 

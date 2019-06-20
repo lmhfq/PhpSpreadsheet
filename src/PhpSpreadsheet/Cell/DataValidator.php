@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Cell;
+namespace Wya\PhpSpreadsheet\Cell;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\Exception;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\Exception;
 
 /**
  * Validate a cell value according to its validation rules.

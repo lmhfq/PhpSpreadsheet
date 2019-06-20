@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Calculation;
+namespace Wya\PhpSpreadsheet\Calculation;
 
-use PhpOffice\PhpSpreadsheet\Shared\Trend\Trend;
+use Wya\PhpSpreadsheet\Shared\Trend\Trend;
 
 class Statistical
 {

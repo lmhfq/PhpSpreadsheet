@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Calculation;
+namespace Wya\PhpSpreadsheet\Calculation;
 
 use Complex\Complex;
 use Complex\Exception as ComplexException;

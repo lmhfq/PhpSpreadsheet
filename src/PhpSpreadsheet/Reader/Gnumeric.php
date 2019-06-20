@@ -1,23 +1,23 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader;
+namespace Wya\PhpSpreadsheet\Reader;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\NamedRange;
-use PhpOffice\PhpSpreadsheet\Reader\Security\XmlScanner;
-use PhpOffice\PhpSpreadsheet\ReferenceHelper;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Settings;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Borders;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Font;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\NamedRange;
+use Wya\PhpSpreadsheet\Reader\Security\XmlScanner;
+use Wya\PhpSpreadsheet\ReferenceHelper;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Alignment;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Borders;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 use XMLReader;
 
 class Gnumeric extends BaseReader

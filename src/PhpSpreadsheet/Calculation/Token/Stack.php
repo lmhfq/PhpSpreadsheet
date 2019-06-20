@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Calculation\Token;
+namespace Wya\PhpSpreadsheet\Calculation\Token;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
 
 class Stack
 {

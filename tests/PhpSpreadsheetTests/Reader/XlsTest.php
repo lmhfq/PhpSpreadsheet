@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Reader\Xls;
+use Wya\PhpSpreadsheet\Reader\Xls;
 use PHPUnit\Framework\TestCase;
 
 class XlsTest extends TestCase

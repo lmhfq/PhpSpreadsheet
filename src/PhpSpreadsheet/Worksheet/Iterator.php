@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet;
+namespace Wya\PhpSpreadsheet\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class Iterator implements \Iterator
 {

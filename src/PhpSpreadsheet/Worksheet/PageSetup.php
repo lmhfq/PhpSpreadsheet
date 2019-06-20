@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet;
+namespace Wya\PhpSpreadsheet\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
 
 /**
  * <code>
@@ -79,7 +79,7 @@ use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
  *
  * @category   PhpSpreadsheet
  *
- * @copyright  Copyright (c) 2006 - 2016 PhpSpreadsheet (https://github.com/PHPOffice/PhpSpreadsheet)
+ * @copyright  Copyright (c) 2006 - 2016 PhpSpreadsheet (https://github.com/Wya/PhpSpreadsheet)
  */
 class PageSetup
 {

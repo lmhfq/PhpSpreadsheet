@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Chart;
+namespace Wya\PhpSpreadsheet\Chart;
 
 class Title
 {

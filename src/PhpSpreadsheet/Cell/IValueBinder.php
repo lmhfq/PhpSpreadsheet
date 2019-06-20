@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Cell;
+namespace Wya\PhpSpreadsheet\Cell;
 
 interface IValueBinder
 {

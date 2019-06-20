@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\Trend;
+namespace Wya\PhpSpreadsheet\Shared\Trend;
 
-use PhpOffice\PhpSpreadsheet\Shared\JAMA\Matrix;
+use Wya\PhpSpreadsheet\Shared\JAMA\Matrix;
 
 class PolynomialBestFit extends BestFit
 {

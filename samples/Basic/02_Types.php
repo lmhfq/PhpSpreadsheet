@@ -1,10 +1,10 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Color;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Color;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
 
 require __DIR__ . '/../Header.php';
 
@@ -138,7 +138,7 @@ $spreadsheet->getActiveSheet()
 $spreadsheet->getActiveSheet()
     ->getCell('C17')
     ->getHyperlink()
-    ->setUrl('https://github.com/PHPOffice/PhpSpreadsheet')
+    ->setUrl('https://github.com/Wya/PhpSpreadsheet')
     ->setTooltip('Navigate to PhpSpreadsheet website');
 
 $spreadsheet->getActiveSheet()

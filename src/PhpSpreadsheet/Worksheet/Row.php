@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet;
+namespace Wya\PhpSpreadsheet\Worksheet;
 
 class Row
 {
     /**
-     * \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet.
+     * \Wya\PhpSpreadsheet\Worksheet\Worksheet.
      *
      * @var Worksheet
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader;
+namespace Wya\PhpSpreadsheet\Reader;
 
 interface IReader
 {
@@ -25,7 +25,7 @@ interface IReader
      *
      * @throws Exception
      *
-     * @return \PhpOffice\PhpSpreadsheet\Spreadsheet
+     * @return \Wya\PhpSpreadsheet\Spreadsheet
      */
     public function load($pFilename);
 }

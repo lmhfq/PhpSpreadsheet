@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
+use Wya\PhpSpreadsheet\Reader\IReadFilter;
 
 /**
  * Show only cells from odd columns.

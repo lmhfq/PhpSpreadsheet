@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
-use PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Wya\PhpSpreadsheet\Reader\IReadFilter;
+use Wya\PhpSpreadsheet\Writer\Xlsx;
 
 require __DIR__ . '/../Header.php';
 

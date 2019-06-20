@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Calculation;
+namespace Wya\PhpSpreadsheet\Calculation;
 
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\Cell;
 
 class Functions
 {

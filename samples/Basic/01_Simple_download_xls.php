@@ -1,8 +1,8 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Helper\Sample;
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Helper\Sample;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require_once __DIR__ . '/../../src/Bootstrap.php';
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Cell;
+namespace Wya\PhpSpreadsheet\Cell;
 
-use PhpOffice\PhpSpreadsheet\Exception;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Exception;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 /**
  * Helper class to manipulate cell coordinates.

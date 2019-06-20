@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Functional;
+namespace Wya\PhpSpreadsheetTests\Functional;
 
-use PhpOffice\PhpSpreadsheet\Cell\Hyperlink;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\MemoryDrawing;
+use Wya\PhpSpreadsheet\Cell\Hyperlink;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\MemoryDrawing;
 
 class DrawingImageHyperlinkTest extends AbstractFunctional
 {
     public function testDrawingImageHyperlinkTest()
     {
-        $baseUrl = 'https://github.com/PHPOffice/PhpSpreadsheet';
+        $baseUrl = 'https://github.com/Wya/PhpSpreadsheet';
         $spreadsheet = new Spreadsheet();
 
         $aSheet = $spreadsheet->getActiveSheet();
@@ -36,7 +36,7 @@ class DrawingImageHyperlinkTest extends AbstractFunctional
         $reloadedSpreadsheet = $this->writeAndReload($spreadsheet, 'Xlsx');
 
         foreach ($reloadedSpreadsheet->getActiveSheet()->getDrawingCollection() as $pDrawing) {
-            self::assertEquals('https://github.com/PHPOffice/PhpSpreadsheet', $pDrawing->getHyperlink()->getUrl(), 'functional test drawing hyperlink');
+            self::assertEquals('https://github.com/Wya/PhpSpreadsheet', $pDrawing->getHyperlink()->getUrl(), 'functional test drawing hyperlink');
         }
     }
 }

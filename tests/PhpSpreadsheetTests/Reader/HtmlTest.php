@@ -1,12 +1,12 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Reader\Html;
-use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Font;
-use PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
+use Wya\PhpSpreadsheet\Reader\Html;
+use Wya\PhpSpreadsheet\Style\Alignment;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Worksheet\Drawing;
 use PHPUnit\Framework\TestCase;
 
 class HtmlTest extends TestCase
@@ -282,7 +282,7 @@ class HtmlTest extends TestCase
     /**
      * @param $filename
      *
-     * @return \PhpOffice\PhpSpreadsheet\Spreadsheet
+     * @return \Wya\PhpSpreadsheet\Spreadsheet
      */
     private function loadHtmlIntoSpreadsheet($filename)
     {

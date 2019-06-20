@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
+namespace Wya\PhpSpreadsheet\Writer\Xls;
 
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet as PhpspreadsheetWorksheet;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet as PhpspreadsheetWorksheet;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Parser (used as the base for this class):
 // -----------------------------------------------------------------------------------------
@@ -803,7 +803,7 @@ class Parser
     /**
      * Look up the index that corresponds to an external sheet name. The hash of
      * sheet names is updated by the addworksheet() method of the
-     * \PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook class.
+     * \Wya\PhpSpreadsheet\Writer\Xls\Workbook class.
      *
      * @param string $sheet_name Sheet name
      *
@@ -821,9 +821,9 @@ class Parser
     /**
      * This method is used to update the array of sheet names. It is
      * called by the addWorksheet() method of the
-     * \PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook class.
+     * \Wya\PhpSpreadsheet\Writer\Xls\Workbook class.
      *
-     * @see \PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook::addWorksheet()
+     * @see \Wya\PhpSpreadsheet\Writer\Xls\Workbook::addWorksheet()
      *
      * @param string $name The name of the worksheet being added
      * @param int $index The index of the worksheet being added

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\RichText;
+namespace Wya\PhpSpreadsheet\RichText;
 
 class TextElement implements ITextElement
 {
@@ -49,7 +49,7 @@ class TextElement implements ITextElement
     /**
      * Get font.
      *
-     * @return null|\PhpOffice\PhpSpreadsheet\Style\Font
+     * @return null|\Wya\PhpSpreadsheet\Style\Font
      */
     public function getFont()
     {

@@ -44,7 +44,7 @@ reference](./references/features-cross-reference.md).
 ## Formulas don't seem to be calculated in Excel2003 using compatibility pack?
 
 This is normal behaviour of the compatibility pack, `Xlsx` displays this
-correctly. Use `\PhpOffice\PhpSpreadsheet\Writer\Xls` if you really need
+correctly. Use `\Wya\PhpSpreadsheet\Writer\Xls` if you really need
 calculated values, or force recalculation in Excel2003.
 
 ## Setting column width is not 100% accurate

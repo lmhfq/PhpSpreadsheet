@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Chart;
+namespace Wya\PhpSpreadsheetTests\Chart;
 
-use PhpOffice\PhpSpreadsheet\Chart\DataSeriesValues;
-use PhpOffice\PhpSpreadsheet\Exception;
+use Wya\PhpSpreadsheet\Chart\DataSeriesValues;
+use Wya\PhpSpreadsheet\Exception;
 use PHPUnit\Framework\TestCase;
 
 class DataSeriesValuesTest extends TestCase

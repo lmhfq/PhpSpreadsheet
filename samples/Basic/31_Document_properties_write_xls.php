@@ -1,7 +1,7 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Document\Properties;
-use PhpOffice\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Document\Properties;
+use Wya\PhpSpreadsheet\IOFactory;
 
 require __DIR__ . '/../Header.php';
 

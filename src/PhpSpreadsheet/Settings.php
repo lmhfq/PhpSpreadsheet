@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Chart\Renderer\IRenderer;
-use PhpOffice\PhpSpreadsheet\Collection\Memory;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Chart\Renderer\IRenderer;
+use Wya\PhpSpreadsheet\Collection\Memory;
 use Psr\SimpleCache\CacheInterface;
 
 class Settings
 {
     /**
      * Class name of the chart renderer used for rendering charts
-     * eg: PhpOffice\PhpSpreadsheet\Chart\Renderer\JpGraph.
+     * eg: Wya\PhpSpreadsheet\Chart\Renderer\JpGraph.
      *
      * @var string
      */
@@ -47,7 +47,7 @@ class Settings
      * Identify to PhpSpreadsheet the external library to use for rendering charts.
      *
      * @param string $rendererClass Class name of the chart renderer
-     *    eg: PhpOffice\PhpSpreadsheet\Chart\Renderer\JpGraph
+     *    eg: Wya\PhpSpreadsheet\Chart\Renderer\JpGraph
      *
      * @throws Exception
      */
@@ -64,7 +64,7 @@ class Settings
      * Return the Chart Rendering Library that PhpSpreadsheet is currently configured to use.
      *
      * @return null|string Class name of the chart renderer
-     *    eg: PhpOffice\PhpSpreadsheet\Chart\Renderer\JpGraph
+     *    eg: Wya\PhpSpreadsheet\Chart\Renderer\JpGraph
      */
     public static function getChartRenderer()
     {

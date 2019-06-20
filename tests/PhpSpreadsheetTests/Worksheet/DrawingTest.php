@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Worksheet;
+namespace Wya\PhpSpreadsheetTests\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\MemoryDrawing;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\MemoryDrawing;
 use PHPUnit\Framework\TestCase;
 
 class DrawingTest extends TestCase

@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
+namespace Wya\PhpSpreadsheet\Writer\Xls;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Style;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Style;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Workbook (used as the base for this class):
 // -----------------------------------------------------------------------------------------
@@ -48,7 +48,7 @@ class Workbook extends BIFFwriter
     /**
      * Formula parser.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Writer\Xls\Parser
+     * @var \Wya\PhpSpreadsheet\Writer\Xls\Parser
      */
     private $parser;
 
@@ -64,7 +64,7 @@ class Workbook extends BIFFwriter
     /**
      * XF Writers.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Writer\Xls\Xf[]
+     * @var \Wya\PhpSpreadsheet\Writer\Xls\Xf[]
      */
     private $xfWriters = [];
 
@@ -167,7 +167,7 @@ class Workbook extends BIFFwriter
     /**
      * Escher object corresponding to MSODRAWINGGROUP.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Shared\Escher
+     * @var \Wya\PhpSpreadsheet\Shared\Escher
      */
     private $escher;
 
@@ -273,11 +273,11 @@ class Workbook extends BIFFwriter
     /**
      * Add a font to added fonts.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font
+     * @param \Wya\PhpSpreadsheet\Style\Font $font
      *
      * @return int Index to FONT record
      */
-    public function addFont(\PhpOffice\PhpSpreadsheet\Style\Font $font)
+    public function addFont(\Wya\PhpSpreadsheet\Style\Font $font)
     {
         $fontHashCode = $font->getHashCode();
         if (isset($this->addedFonts[$fontHashCode])) {
@@ -808,15 +808,15 @@ class Workbook extends BIFFwriter
 
         // sheet state
         switch ($sheet->getSheetState()) {
-            case \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::SHEETSTATE_VISIBLE:
+            case \Wya\PhpSpreadsheet\Worksheet\Worksheet::SHEETSTATE_VISIBLE:
                 $ss = 0x00;
 
                 break;
-            case \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::SHEETSTATE_HIDDEN:
+            case \Wya\PhpSpreadsheet\Worksheet\Worksheet::SHEETSTATE_HIDDEN:
                 $ss = 0x01;
 
                 break;
-            case \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::SHEETSTATE_VERYHIDDEN:
+            case \Wya\PhpSpreadsheet\Worksheet\Worksheet::SHEETSTATE_VERYHIDDEN:
                 $ss = 0x02;
 
                 break;
@@ -1131,7 +1131,7 @@ class Workbook extends BIFFwriter
     /**
      * Get Escher object.
      *
-     * @return \PhpOffice\PhpSpreadsheet\Shared\Escher
+     * @return \Wya\PhpSpreadsheet\Shared\Escher
      */
     public function getEscher()
     {
@@ -1141,9 +1141,9 @@ class Workbook extends BIFFwriter
     /**
      * Set Escher object.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Shared\Escher $pValue
+     * @param \Wya\PhpSpreadsheet\Shared\Escher $pValue
      */
-    public function setEscher(\PhpOffice\PhpSpreadsheet\Shared\Escher $pValue = null)
+    public function setEscher(\Wya\PhpSpreadsheet\Shared\Escher $pValue = null)
     {
         $this->escher = $pValue;
     }

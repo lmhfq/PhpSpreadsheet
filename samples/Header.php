@@ -2,7 +2,7 @@
 /**
  * Header file.
  */
-use PhpOffice\PhpSpreadsheet\Helper\Sample;
+use Wya\PhpSpreadsheet\Helper\Sample;
 
 error_reporting(E_ALL);
 
@@ -54,7 +54,7 @@ if ($helper->isCli()) {
                     } ?>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="https://github.com/PHPOffice/PHPSpreadsheet"><i class="fa fa-github fa-lg" title="GitHub"></i>&nbsp;</a></li>
+                        <li><a href="https://github.com/Wya/PHPSpreadsheet"><i class="fa fa-github fa-lg" title="GitHub"></i>&nbsp;</a></li>
                         <li><a href="https://phpspreadsheet.readthedocs.io"><i class="fa fa-book fa-lg" title="Docs"></i>&nbsp;</a></li>
                     </ul>
                 </div>

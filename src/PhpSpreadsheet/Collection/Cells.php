@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Collection;
+namespace Wya\PhpSpreadsheet\Collection;
 
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 use Psr\SimpleCache\CacheInterface;
 
 class Cells
@@ -411,7 +411,7 @@ class Cells
      *
      * @throws PhpSpreadsheetException
      *
-     * @return \PhpOffice\PhpSpreadsheet\Cell\Cell
+     * @return \Wya\PhpSpreadsheet\Cell\Cell
      */
     public function add($pCoord, Cell $cell)
     {
@@ -434,7 +434,7 @@ class Cells
      *
      * @throws PhpSpreadsheetException
      *
-     * @return \PhpOffice\PhpSpreadsheet\Cell\Cell Cell that was found, or null if not found
+     * @return \Wya\PhpSpreadsheet\Cell\Cell Cell that was found, or null if not found
      */
     public function get($pCoord)
     {

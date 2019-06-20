@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Functional;
+namespace Wya\PhpSpreadsheetTests\Functional;
 
-use PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Reader\IReadFilter;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class ReadFilterTest extends AbstractFunctional
 {
@@ -92,7 +92,7 @@ class ReadFilterTest extends AbstractFunctional
     }
 
     /**
-     * @see \PhpOffice\PhpSpreadsheet\Reader\IReadFilter::readCell()
+     * @see \Wya\PhpSpreadsheet\Reader\IReadFilter::readCell()
      *
      * @param string $column Column address (as a string value like "A", or "IV")
      * @param int $row Row number

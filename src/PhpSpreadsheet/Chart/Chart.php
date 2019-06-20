@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Chart;
+namespace Wya\PhpSpreadsheet\Chart;
 
-use PhpOffice\PhpSpreadsheet\Settings;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 class Chart
 {

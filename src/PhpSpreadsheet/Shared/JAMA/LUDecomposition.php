@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\JAMA;
+namespace Wya\PhpSpreadsheet\Shared\JAMA;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Exception as CalculationException;
+use Wya\PhpSpreadsheet\Calculation\Exception as CalculationException;
 
 /**
  *    For an m-by-n matrix A with m >= n, the LU decomposition is an m-by-n

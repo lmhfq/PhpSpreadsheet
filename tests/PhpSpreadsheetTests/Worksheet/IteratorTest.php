@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Worksheet;
+namespace Wya\PhpSpreadsheetTests\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\Iterator;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\Iterator;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 use PHPUnit\Framework\TestCase;
 
 class IteratorTest extends TestCase

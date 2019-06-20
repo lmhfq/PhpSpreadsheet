@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Helper;
+namespace Wya\PhpSpreadsheetTests\Helper;
 
-use PhpOffice\PhpSpreadsheet\Helper\Html;
+use Wya\PhpSpreadsheet\Helper\Html;
 use PHPUnit\Framework\TestCase;
 
 class HtmlTest extends TestCase

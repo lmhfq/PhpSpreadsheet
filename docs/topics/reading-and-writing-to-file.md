@@ -4,37 +4,37 @@ As you already know from the [architecture](./architecture.md#readers-and-writer
 reading and writing to a
 persisted storage is not possible using the base PhpSpreadsheet classes.
 For this purpose, PhpSpreadsheet provides readers and writers, which are
-implementations of `\PhpOffice\PhpSpreadsheet\Reader\IReader` and
-`\PhpOffice\PhpSpreadsheet\Writer\IWriter`.
+implementations of `\Wya\PhpSpreadsheet\Reader\IReader` and
+`\Wya\PhpSpreadsheet\Writer\IWriter`.
 
-## \PhpOffice\PhpSpreadsheet\IOFactory
+## \Wya\PhpSpreadsheet\IOFactory
 
 The PhpSpreadsheet API offers multiple methods to create a
-`\PhpOffice\PhpSpreadsheet\Reader\IReader` or
-`\PhpOffice\PhpSpreadsheet\Writer\IWriter` instance:
+`\Wya\PhpSpreadsheet\Reader\IReader` or
+`\Wya\PhpSpreadsheet\Writer\IWriter` instance:
 
-Direct creation via `\PhpOffice\PhpSpreadsheet\IOFactory`. All examples
+Direct creation via `\Wya\PhpSpreadsheet\IOFactory`. All examples
 underneath demonstrate the direct creation method. Note that you can
-also use the `\PhpOffice\PhpSpreadsheet\IOFactory` class to do this.
+also use the `\Wya\PhpSpreadsheet\IOFactory` class to do this.
 
-### Creating `\PhpOffice\PhpSpreadsheet\Reader\IReader` using `\PhpOffice\PhpSpreadsheet\IOFactory`
+### Creating `\Wya\PhpSpreadsheet\Reader\IReader` using `\Wya\PhpSpreadsheet\IOFactory`
 
 There are 2 methods for reading in a file into PhpSpreadsheet: using
 automatic file type resolving or explicitly.
 
 Automatic file type resolving checks the different
-`\PhpOffice\PhpSpreadsheet\Reader\IReader` distributed with
+`\Wya\PhpSpreadsheet\Reader\IReader` distributed with
 PhpSpreadsheet. If one of them can load the specified file name, the
-file is loaded using that `\PhpOffice\PhpSpreadsheet\Reader\IReader`.
+file is loaded using that `\Wya\PhpSpreadsheet\Reader\IReader`.
 Explicit mode requires you to specify which
-`\PhpOffice\PhpSpreadsheet\Reader\IReader` should be used.
+`\Wya\PhpSpreadsheet\Reader\IReader` should be used.
 
-You can create a `\PhpOffice\PhpSpreadsheet\Reader\IReader` instance using
-`\PhpOffice\PhpSpreadsheet\IOFactory` in automatic file type resolving
+You can create a `\Wya\PhpSpreadsheet\Reader\IReader` instance using
+`\Wya\PhpSpreadsheet\IOFactory` in automatic file type resolving
 mode using the following code sample:
 
 ``` php
-$spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load("05featuredemo.xlsx");
+$spreadsheet = \Wya\PhpSpreadsheet\IOFactory::load("05featuredemo.xlsx");
 ```
 
 A typical use of this feature is when you need to read files uploaded by
@@ -46,30 +46,30 @@ data, see more about this later), then you may instead want to use this
 variant:
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile("05featuredemo.xlsx");
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReaderForFile("05featuredemo.xlsx");
 $reader->setReadDataOnly(true);
 $reader->load("05featuredemo.xlsx");
 ```
 
-You can create a `\PhpOffice\PhpSpreadsheet\Reader\IReader` instance using
-`\PhpOffice\PhpSpreadsheet\IOFactory` in explicit mode using the following
+You can create a `\Wya\PhpSpreadsheet\Reader\IReader` instance using
+`\Wya\PhpSpreadsheet\IOFactory` in explicit mode using the following
 code sample:
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader("Xlsx");
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader("Xlsx");
 $spreadsheet = $reader->load("05featuredemo.xlsx");
 ```
 
 Note that automatic type resolving mode is slightly slower than explicit
 mode.
 
-### Creating `\PhpOffice\PhpSpreadsheet\Writer\IWriter` using `\PhpOffice\PhpSpreadsheet\IOFactory`
+### Creating `\Wya\PhpSpreadsheet\Writer\IWriter` using `\Wya\PhpSpreadsheet\IOFactory`
 
-You can create a `\PhpOffice\PhpSpreadsheet\Writer\IWriter` instance using
-`\PhpOffice\PhpSpreadsheet\IOFactory`:
+You can create a `\Wya\PhpSpreadsheet\Writer\IWriter` instance using
+`\Wya\PhpSpreadsheet\IOFactory`:
 
 ``` php
-$writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, "Xlsx");
+$writer = \Wya\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, "Xlsx");
 $writer->save("05featuredemo.xlsx");
 ```
 
@@ -78,14 +78,14 @@ $writer->save("05featuredemo.xlsx");
 Xlsx file format is the main file format of PhpSpreadsheet. It allows
 outputting the in-memory spreadsheet to a .xlsx file.
 
-### \PhpOffice\PhpSpreadsheet\Reader\Xlsx
+### \Wya\PhpSpreadsheet\Reader\Xlsx
 
 #### Reading a spreadsheet
 
 You can read an .xlsx file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xlsx();
 $spreadsheet = $reader->load("05featuredemo.xlsx");
 ```
 
@@ -95,7 +95,7 @@ You can set the option setReadDataOnly on the reader, to instruct the
 reader to ignore styling, data validation, … and just read cell data:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xlsx();
 $reader->setReadDataOnly(true);
 $spreadsheet = $reader->load("05featuredemo.xlsx");
 ```
@@ -106,7 +106,7 @@ You can set the option setLoadSheetsOnly on the reader, to instruct the
 reader to only load the sheets with a given name:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xlsx();
 $reader->setLoadSheetsOnly(["Sheet 1", "My special sheet"]);
 $spreadsheet = $reader->load("05featuredemo.xlsx");
 ```
@@ -116,14 +116,14 @@ $spreadsheet = $reader->load("05featuredemo.xlsx");
 You can set the option setReadFilter on the reader, to instruct the
 reader to only load the cells which match a given rule. A read filter
 can be any class which implements
-`\PhpOffice\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
-read using the `\PhpOffice\PhpSpreadsheet\Reader\DefaultReadFilter`.
+`\Wya\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
+read using the `\Wya\PhpSpreadsheet\Reader\DefaultReadFilter`.
 
 The following code will only read row 1 and rows 20 – 30 of any sheet in
 the Excel file:
 
 ``` php
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter {
 
     public function readCell($column, $row, $worksheetName = '') {
         // Read title row and rows 20 - 30
@@ -134,19 +134,19 @@ class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
     }
 }
 
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xlsx();
 $reader->setReadFilter( new MyReadFilter() );
 $spreadsheet = $reader->load("06largescale.xlsx");
 ```
 
-### \PhpOffice\PhpSpreadsheet\Writer\Xlsx
+### \Wya\PhpSpreadsheet\Writer\Xlsx
 
 #### Writing a spreadsheet
 
 You can write an .xlsx file using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
 $writer->save("05featuredemo.xlsx");
 ```
 
@@ -157,7 +157,7 @@ This can be slow on large spreadsheets, and maybe even unwanted. You can
 however disable formula pre-calculation:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
 $writer->setPreCalculateFormulas(false);
 $writer->save("05featuredemo.xlsx");
 ```
@@ -169,7 +169,7 @@ small issues when opening Xlsx spreadsheets (mostly related to formula
 calculation). You can enable Office2003 compatibility with the following
 code:
 
-    $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
+    $writer = new \Wya\PhpSpreadsheet\Writer\Xlsx($spreadsheet);
     $writer->setOffice2003Compatibility(true);
     $writer->save("05featuredemo.xlsx");
 
@@ -196,14 +196,14 @@ additional file format for PhpSpreadsheet.
 limits regarding to styling cells and handling large spreadsheets via
 PHP.
 
-### \PhpOffice\PhpSpreadsheet\Reader\Xls
+### \Wya\PhpSpreadsheet\Reader\Xls
 
 #### Reading a spreadsheet
 
 You can read an .xls file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xls();
 $spreadsheet = $reader->load("05featuredemo.xls");
 ```
 
@@ -213,7 +213,7 @@ You can set the option setReadDataOnly on the reader, to instruct the
 reader to ignore styling, data validation, … and just read cell data:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xls();
 $reader->setReadDataOnly(true);
 $spreadsheet = $reader->load("05featuredemo.xls");
 ```
@@ -224,7 +224,7 @@ You can set the option setLoadSheetsOnly on the reader, to instruct the
 reader to only load the sheets with a given name:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xls();
 $reader->setLoadSheetsOnly(["Sheet 1", "My special sheet"]);
 $spreadsheet = $reader->load("05featuredemo.xls");
 ```
@@ -234,14 +234,14 @@ $spreadsheet = $reader->load("05featuredemo.xls");
 You can set the option setReadFilter on the reader, to instruct the
 reader to only load the cells which match a given rule. A read filter
 can be any class which implements
-`\PhpOffice\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
-read using the `\PhpOffice\PhpSpreadsheet\Reader\DefaultReadFilter`.
+`\Wya\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
+read using the `\Wya\PhpSpreadsheet\Reader\DefaultReadFilter`.
 
 The following code will only read row 1 and rows 20 to 30 of any sheet
 in the Excel file:
 
 ``` php
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter {
 
     public function readCell($column, $row, $worksheetName = '') {
         // Read title row and rows 20 - 30
@@ -252,19 +252,19 @@ class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
     }
 }
 
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xls();
 $reader->setReadFilter( new MyReadFilter() );
 $spreadsheet = $reader->load("06largescale.xls");
 ```
 
-### \PhpOffice\PhpSpreadsheet\Writer\Xls
+### \Wya\PhpSpreadsheet\Writer\Xls
 
 #### Writing a spreadsheet
 
 You can write an .xls file using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Xls($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Xls($spreadsheet);
 $writer->save("05featuredemo.xls");
 ```
 
@@ -277,14 +277,14 @@ versions of Microsoft Excel.
 has some limits regarding to styling cells and handling large
 spreadsheets via PHP.
 
-### \PhpOffice\PhpSpreadsheet\Reader\Xml
+### \Wya\PhpSpreadsheet\Reader\Xml
 
 #### Reading a spreadsheet
 
 You can read an Excel 2003 .xml file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xml();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xml();
 $spreadsheet = $reader->load("05featuredemo.xml");
 ```
 
@@ -293,14 +293,14 @@ $spreadsheet = $reader->load("05featuredemo.xml");
 You can set the option setReadFilter on the reader, to instruct the
 reader to only load the cells which match a given rule. A read filter
 can be any class which implements
-`\PhpOffice\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
-read using the `\PhpOffice\PhpSpreadsheet\Reader\DefaultReadFilter`.
+`\Wya\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
+read using the `\Wya\PhpSpreadsheet\Reader\DefaultReadFilter`.
 
 The following code will only read row 1 and rows 20 to 30 of any sheet
 in the Excel file:
 
 ``` php
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter {
 
     public function readCell($column, $row, $worksheetName = '') {
         // Read title row and rows 20 - 30
@@ -312,7 +312,7 @@ class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
 
 }
 
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xml();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xml();
 $reader->setReadFilter( new MyReadFilter() );
 $spreadsheet = $reader->load("06largescale.xml");
 ```
@@ -328,14 +328,14 @@ applications, such as databases.
 **SYLK limitations** Please note that SYLK file format has some limits
 regarding to styling cells and handling large spreadsheets via PHP.
 
-### \PhpOffice\PhpSpreadsheet\Reader\Slk
+### \Wya\PhpSpreadsheet\Reader\Slk
 
 #### Reading a spreadsheet
 
 You can read an .slk file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Slk();
+$reader = new \Wya\PhpSpreadsheet\Reader\Slk();
 $spreadsheet = $reader->load("05featuredemo.slk");
 ```
 
@@ -344,14 +344,14 @@ $spreadsheet = $reader->load("05featuredemo.slk");
 You can set the option setReadFilter on the reader, to instruct the
 reader to only load the cells which match a given rule. A read filter
 can be any class which implements
-`\PhpOffice\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
-read using the `\PhpOffice\PhpSpreadsheet\Reader\DefaultReadFilter`.
+`\Wya\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
+read using the `\Wya\PhpSpreadsheet\Reader\DefaultReadFilter`.
 
 The following code will only read row 1 and rows 20 to 30 of any sheet
 in the SYLK file:
 
 ``` php
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter {
 
     public function readCell($column, $row, $worksheetName = '') {
         // Read title row and rows 20 - 30
@@ -363,7 +363,7 @@ class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
 
 }
 
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Slk();
+$reader = new \Wya\PhpSpreadsheet\Reader\Slk();
 $reader->setReadFilter( new MyReadFilter() );
 $spreadsheet = $reader->load("06largescale.slk");
 ```
@@ -373,14 +373,14 @@ $spreadsheet = $reader->load("06largescale.slk");
 Open Office or Libre Office .ods files are the standard file format for
 Open Office or Libre Office Calc files.
 
-### \PhpOffice\PhpSpreadsheet\Reader\Ods
+### \Wya\PhpSpreadsheet\Reader\Ods
 
 #### Reading a spreadsheet
 
 You can read an .ods file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Ods();
+$reader = new \Wya\PhpSpreadsheet\Reader\Ods();
 $spreadsheet = $reader->load("05featuredemo.ods");
 ```
 
@@ -389,14 +389,14 @@ $spreadsheet = $reader->load("05featuredemo.ods");
 You can set the option setReadFilter on the reader, to instruct the
 reader to only load the cells which match a given rule. A read filter
 can be any class which implements
-`\PhpOffice\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
-read using the `\PhpOffice\PhpSpreadsheet\Reader\DefaultReadFilter`.
+`\Wya\PhpSpreadsheet\Reader\IReadFilter`. By default, all cells are
+read using the `\Wya\PhpSpreadsheet\Reader\DefaultReadFilter`.
 
 The following code will only read row 1 and rows 20 to 30 of any sheet
 in the Calc file:
 
 ``` php
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter {
 
     public function readCell($column, $row, $worksheetName = '') {
         // Read title row and rows 20 - 30
@@ -408,7 +408,7 @@ class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter {
 
 }
 
-$reader = new PhpOffice\PhpSpreadsheet\Reader\Ods();
+$reader = new Wya\PhpSpreadsheet\Reader\Ods();
 $reader->setReadFilter( new MyReadFilter() );
 $spreadsheet = $reader->load("06largescale.ods");
 ```
@@ -422,14 +422,14 @@ CSV files.
 **CSV limitations** Please note that CSV file format has some limits
 regarding to styling cells, number formatting, ...
 
-### \PhpOffice\PhpSpreadsheet\Reader\Csv
+### \Wya\PhpSpreadsheet\Reader\Csv
 
 #### Reading a CSV file
 
 You can read a .csv file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+$reader = new \Wya\PhpSpreadsheet\Reader\Csv();
 $spreadsheet = $reader->load("sample.csv");
 ```
 
@@ -437,21 +437,21 @@ $spreadsheet = $reader->load("sample.csv");
 
 Often, CSV files are not really "comma separated", or use semicolon (`;`)
 as a separator. You can instruct
-`\PhpOffice\PhpSpreadsheet\Reader\Csv` some options before reading a CSV
+`\Wya\PhpSpreadsheet\Reader\Csv` some options before reading a CSV
 file.
 
 The separator will be auto-detected, so in most cases it should not be necessary
 to specify it. But in cases where auto-detection does not fit the use-case, then
 it can be set manually.
 
-Note that `\PhpOffice\PhpSpreadsheet\Reader\Csv` by default assumes that
+Note that `\Wya\PhpSpreadsheet\Reader\Csv` by default assumes that
 the loaded CSV file is UTF-8 encoded. If you are reading CSV files that
 were created in Microsoft Office Excel the correct input encoding may
 rather be Windows-1252 (CP1252). Always make sure that the input
 encoding is set appropriately.
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+$reader = new \Wya\PhpSpreadsheet\Reader\Csv();
 $reader->setInputEncoding('CP1252');
 $reader->setDelimiter(';');
 $reader->setEnclosure('');
@@ -477,7 +477,7 @@ CSV file into an existing `$spreadsheet` containing some sheets, and
 imports onto the 6th sheet:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+$reader = new \Wya\PhpSpreadsheet\Reader\Csv();
 $reader->setDelimiter(';');
 $reader->setEnclosure('');
 $reader->setSheetIndex(5);
@@ -485,14 +485,14 @@ $reader->setSheetIndex(5);
 $reader->loadIntoExisting("05featuredemo.csv", $spreadsheet);
 ```
 
-### \PhpOffice\PhpSpreadsheet\Writer\Csv
+### \Wya\PhpSpreadsheet\Writer\Csv
 
 #### Writing a CSV file
 
 You can write a .csv file using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Csv($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Csv($spreadsheet);
 $writer->save("05featuredemo.csv");
 ```
 
@@ -500,11 +500,11 @@ $writer->save("05featuredemo.csv");
 
 Often, CSV files are not really "comma separated", or use semicolon (`;`)
 as a separator. You can instruct
-`\PhpOffice\PhpSpreadsheet\Writer\Csv` some options before writing a CSV
+`\Wya\PhpSpreadsheet\Writer\Csv` some options before writing a CSV
 file:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Csv($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Csv($spreadsheet);
 $writer->setDelimiter(';');
 $writer->setEnclosure('');
 $writer->setLineEnding("\r\n");
@@ -529,7 +529,7 @@ This can be slow on large spreadsheets, and maybe even unwanted. You can
 however disable formula pre-calculation:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Csv($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Csv($spreadsheet);
 $writer->setPreCalculateFormulas(false);
 $writer->save("05featuredemo.csv");
 ```
@@ -540,7 +540,7 @@ A CSV file can be marked as UTF-8 by writing a BOM file header. This can
 be enabled by using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Csv($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Csv($spreadsheet);
 $writer->setUseBOM(true);
 $writer->save("05featuredemo.csv");
 ```
@@ -558,15 +558,15 @@ to set the characters explicitly as shown below.
 English users will want to use this before doing the export:
 
 ``` php
-\PhpOffice\PhpSpreadsheet\Shared\StringHelper::setDecimalSeparator('.');
-\PhpOffice\PhpSpreadsheet\Shared\StringHelper::setThousandsSeparator(',');
+\Wya\PhpSpreadsheet\Shared\StringHelper::setDecimalSeparator('.');
+\Wya\PhpSpreadsheet\Shared\StringHelper::setThousandsSeparator(',');
 ```
 
 German users will want to use the opposite values.
 
 ``` php
-\PhpOffice\PhpSpreadsheet\Shared\StringHelper::setDecimalSeparator(',');
-\PhpOffice\PhpSpreadsheet\Shared\StringHelper::setThousandsSeparator('.');
+\Wya\PhpSpreadsheet\Shared\StringHelper::setDecimalSeparator(',');
+\Wya\PhpSpreadsheet\Shared\StringHelper::setThousandsSeparator('.');
 ```
 
 Note that the above code sets decimal and thousand separators as global
@@ -583,14 +583,14 @@ extension.
 **HTML limitations** Please note that HTML file format has some limits
 regarding to styling cells, number formatting, ...
 
-### \PhpOffice\PhpSpreadsheet\Reader\Html
+### \Wya\PhpSpreadsheet\Reader\Html
 
 #### Reading a spreadsheet
 
 You can read an .html or .htm file using the following code:
 
 ``` php
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Html();
+$reader = new \Wya\PhpSpreadsheet\Reader\Html();
 
 $spreadsheet = $reader->load("05featuredemo.html");
 ```
@@ -598,9 +598,9 @@ $spreadsheet = $reader->load("05featuredemo.html");
 **HTML limitations** Please note that HTML reader is still experimental
 and does not yet support merged cells or nested tables cleanly
 
-### \PhpOffice\PhpSpreadsheet\Writer\Html
+### \Wya\PhpSpreadsheet\Writer\Html
 
-Please note that `\PhpOffice\PhpSpreadsheet\Writer\Html` only outputs the
+Please note that `\Wya\PhpSpreadsheet\Writer\Html` only outputs the
 first worksheet by default.
 
 #### Writing a spreadsheet
@@ -608,7 +608,7 @@ first worksheet by default.
 You can write a .htm file using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Html($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Html($spreadsheet);
 
 $writer->save("05featuredemo.htm");
 ```
@@ -659,7 +659,7 @@ This can be slow on large spreadsheets, and maybe even unwanted. You can
 however disable formula pre-calculation:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Html($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Html($spreadsheet);
 $writer->setPreCalculateFormulas(false);
 
 $writer->save("05featuredemo.htm");
@@ -668,7 +668,7 @@ $writer->save("05featuredemo.htm");
 #### Embedding generated HTML in a web page
 
 There might be a situation where you want to embed the generated HTML in
-an existing website. \PhpOffice\PhpSpreadsheet\Writer\Html provides
+an existing website. \Wya\PhpSpreadsheet\Writer\Html provides
 support to generate only specific parts of the HTML code, which allows
 you to use these parts in your website.
 
@@ -684,7 +684,7 @@ them into a resulting HTML page:
 
 ``` php
 <?php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Html($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Html($spreadsheet);
 echo $writer->generateHTMLHeader();
 ?>
 
@@ -715,7 +715,7 @@ A HTML file can be marked as UTF-8 by writing a BOM file header. This
 can be enabled by using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Html($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Html($spreadsheet);
 $writer->setUseBOM(true);
 
 $writer->save("05featuredemo.htm");
@@ -723,7 +723,7 @@ $writer->save("05featuredemo.htm");
 
 #### Decimal and thousands separators
 
-See section `\PhpOffice\PhpSpreadsheet\Writer\Csv` how to control the
+See section `\Wya\PhpSpreadsheet\Writer\Csv` how to control the
 appearance of these.
 
 ## PDF
@@ -734,7 +734,7 @@ fast distribution of represented data.
 **PDF limitations** Please note that PDF file format has some limits
 regarding to styling cells, number formatting, ...
 
-### \PhpOffice\PhpSpreadsheet\Writer\Pdf
+### \Wya\PhpSpreadsheet\Writer\Pdf
 
 PhpSpreadsheet’s PDF Writer is a wrapper for a 3rd-Party PDF Rendering
 library such as TCPDF, mPDF or Dompdf. You must now install a PDF
@@ -758,7 +758,7 @@ own circumstances.
 You can instantiate a writer with its specific name, like so:
 
 ``` php
-$writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Mpdf');
+$writer = \Wya\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Mpdf');
 ```
 
 Or you can register which writer you are using with a more generic name,
@@ -766,15 +766,15 @@ so you don't need to remember which library you chose, only that you want
 to write PDF files:
 
 ``` php
-$class = \PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf::class;
-\PhpOffice\PhpSpreadsheet\IOFactory::registerWriter('Pdf', $class);
-$writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Pdf');
+$class = \Wya\PhpSpreadsheet\Writer\Pdf\Mpdf::class;
+\Wya\PhpSpreadsheet\IOFactory::registerWriter('Pdf', $class);
+$writer = \Wya\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Pdf');
 ```
 
 Or you can instantiate directly the writer of your choice like so:
 
 ``` php
-$writer = \PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
+$writer = \Wya\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
 ```
 
 #### Custom implementation or configuration
@@ -788,7 +788,7 @@ class My_Custom_TCPDF extends TCPDF
 	// ...
 }
 
-class My_Custom_TCPDF_Writer extends \PhpOffice\PhpSpreadsheet\Writer\Pdf\Tcpdf
+class My_Custom_TCPDF_Writer extends \Wya\PhpSpreadsheet\Writer\Pdf\Tcpdf
 {
 	protected function createExternalWriterInstance($orientation, $unit, $paperSize)
 	{
@@ -800,7 +800,7 @@ class My_Custom_TCPDF_Writer extends \PhpOffice\PhpSpreadsheet\Writer\Pdf\Tcpdf
 	}
 }
 
-\PhpOffice\PhpSpreadsheet\IOFactory::registerWriter('Pdf', MY_TCPDF_WRITER::class);
+\Wya\PhpSpreadsheet\IOFactory::registerWriter('Pdf', MY_TCPDF_WRITER::class);
 ```
 
 #### Writing a spreadsheet
@@ -809,11 +809,11 @@ Once you have identified the Renderer that you wish to use for PDF
 generation, you can write a .pdf file using the following code:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
 $writer->save("05featuredemo.pdf");
 ```
 
-Please note that `\PhpOffice\PhpSpreadsheet\Writer\Pdf` only outputs the
+Please note that `\Wya\PhpSpreadsheet\Writer\Pdf` only outputs the
 first worksheet by default.
 
 #### Write all worksheets
@@ -841,7 +841,7 @@ This can be slow on large spreadsheets, and maybe even unwanted. You can
 however disable formula pre-calculation:
 
 ``` php
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
 $writer->setPreCalculateFormulas(false);
 
 $writer->save("05featuredemo.pdf");
@@ -849,7 +849,7 @@ $writer->save("05featuredemo.pdf");
 
 #### Decimal and thousands separators
 
-See section `\PhpOffice\PhpSpreadsheet\Writer\Csv` how to control the
+See section `\Wya\PhpSpreadsheet\Writer\Csv` how to control the
 appearance of these.
 
 ## Generating Excel files from templates (read, modify, write)
@@ -863,14 +863,14 @@ Here is an example how to open a template file, fill in a couple of
 fields and save it again:
 
 ``` php
-$spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load('template.xlsx');
+$spreadsheet = \Wya\PhpSpreadsheet\IOFactory::load('template.xlsx');
 
 $worksheet = $spreadsheet->getActiveSheet();
 
 $worksheet->getCell('A1')->setValue('John');
 $worksheet->getCell('A2')->setValue('Smith');
 
-$writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xls');
+$writer = \Wya\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xls');
 $writer->save('write.xls');
 ```
 

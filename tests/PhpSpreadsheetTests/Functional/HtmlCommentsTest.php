@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Functional;
+namespace Wya\PhpSpreadsheetTests\Functional;
 
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class HtmlCommentsTest extends AbstractFunctional
 {

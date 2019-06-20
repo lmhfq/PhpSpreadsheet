@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Shared;
+namespace Wya\PhpSpreadsheetTests\Shared;
 
-use PhpOffice\PhpSpreadsheet\Shared\TimeZone;
+use Wya\PhpSpreadsheet\Shared\TimeZone;
 use PHPUnit\Framework\TestCase;
 
 class TimeZoneTest extends TestCase

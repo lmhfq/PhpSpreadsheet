@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet;
+namespace Wya\PhpSpreadsheet\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
 
 class RowCellIterator extends CellIterator
 {
@@ -121,7 +121,7 @@ class RowCellIterator extends CellIterator
     /**
      * Return the current cell in this worksheet row.
      *
-     * @return \PhpOffice\PhpSpreadsheet\Cell\Cell
+     * @return \Wya\PhpSpreadsheet\Cell\Cell
      */
     public function current()
     {

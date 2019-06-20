@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Calculation;
+namespace Wya\PhpSpreadsheetTests\Calculation;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\Calculation\MathTrig;
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Worksheet\ColumnDimension;
-use PhpOffice\PhpSpreadsheet\Worksheet\RowDimension;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\Calculation\MathTrig;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Worksheet\ColumnDimension;
+use Wya\PhpSpreadsheet\Worksheet\RowDimension;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 use PHPUnit\Framework\TestCase;
 
 class MathTrigTest extends TestCase

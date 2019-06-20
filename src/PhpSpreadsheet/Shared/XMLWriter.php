@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared;
+namespace Wya\PhpSpreadsheet\Shared;
 
 class XMLWriter extends \XMLWriter
 {

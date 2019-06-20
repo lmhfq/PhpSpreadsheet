@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Worksheet;
+namespace Wya\PhpSpreadsheetTests\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Worksheet\Row;
-use PhpOffice\PhpSpreadsheet\Worksheet\RowCellIterator;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Worksheet\Row;
+use Wya\PhpSpreadsheet\Worksheet\RowCellIterator;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 use PHPUnit\Framework\TestCase;
 
 class RowTest extends TestCase

@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Cell;
+namespace Wya\PhpSpreadsheetTests\Cell;
 
-use PhpOffice\PhpSpreadsheet\Cell\AdvancedValueBinder;
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Collection\Cells;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Cell\AdvancedValueBinder;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Collection\Cells;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 use PHPUnit\Framework\TestCase;
 
 class AdvancedValueBinderTest extends TestCase

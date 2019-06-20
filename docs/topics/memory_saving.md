@@ -19,7 +19,7 @@ To enable cell caching, you must provide your own implementation of cache like s
 ``` php
 $cache = new MyCustomPsr16Implementation();
 
-\PhpOffice\PhpSpreadsheet\Settings::setCache($cache);
+\Wya\PhpSpreadsheet\Settings::setCache($cache);
 ```
 
 A separate cache is maintained for each individual worksheet, and is
@@ -65,7 +65,7 @@ Configure PhpSpreadsheet with something like:
 $pool = new \Cache\Adapter\Apcu\ApcuCachePool();
 $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
 
-\PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
+\Wya\PhpSpreadsheet\Settings::setCache($simpleCache);
 ```
 
 ### Redis
@@ -84,7 +84,7 @@ $client->connect('127.0.0.1', 6379);
 $pool = new \Cache\Adapter\Redis\RedisCachePool($client);
 $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
 
-\PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
+\Wya\PhpSpreadsheet\Settings::setCache($simpleCache);
 ```
 
 ### Memcache
@@ -103,5 +103,5 @@ $client->connect('localhost', 11211);
 $pool = new \Cache\Adapter\Memcache\MemcacheCachePool($client);
 $simpleCache = new \Cache\Bridge\SimpleCache\SimpleCacheBridge($pool);
 
-\PhpOffice\PhpSpreadsheet\Settings::setCache($simpleCache);
+\Wya\PhpSpreadsheet\Settings::setCache($simpleCache);
 ```

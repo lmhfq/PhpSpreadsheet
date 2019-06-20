@@ -1,9 +1,9 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Style;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Style;
 
 require __DIR__ . '/../Header.php';
 

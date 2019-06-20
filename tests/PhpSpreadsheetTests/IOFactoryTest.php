@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests;
+namespace Wya\PhpSpreadsheetTests;
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Reader;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Reader;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Writer;
 use PHPUnit\Framework\TestCase;
 
 class IOFactoryTest extends TestCase
@@ -133,14 +133,14 @@ class IOFactoryTest extends TestCase
 
     public function testRegisterInvalidWriter()
     {
-        $this->expectException(\PhpOffice\PhpSpreadsheet\Writer\Exception::class);
+        $this->expectException(\Wya\PhpSpreadsheet\Writer\Exception::class);
 
         IOFactory::registerWriter('foo', 'bar');
     }
 
     public function testRegisterInvalidReader()
     {
-        $this->expectException(\PhpOffice\PhpSpreadsheet\Reader\Exception::class);
+        $this->expectException(\Wya\PhpSpreadsheet\Reader\Exception::class);
 
         IOFactory::registerReader('foo', 'bar');
     }

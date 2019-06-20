@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Style;
+namespace Wya\PhpSpreadsheet\Style;
 
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
 
 class Font extends Supervisor
 {
@@ -148,7 +148,7 @@ class Font extends Supervisor
      *         'name' => 'Arial',
      *         'bold' => TRUE,
      *         'italic' => FALSE,
-     *         'underline' => \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLE,
+     *         'underline' => \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLE,
      *         'strikethrough' => FALSE,
      *         'color' => [
      *             'rgb' => '808080'
@@ -435,7 +435,7 @@ class Font extends Supervisor
     /**
      * Set Underline.
      *
-     * @param bool|string $pValue \PhpOffice\PhpSpreadsheet\Style\Font underline type
+     * @param bool|string $pValue \Wya\PhpSpreadsheet\Style\Font underline type
      *                                    If a boolean is passed, then TRUE equates to UNDERLINE_SINGLE,
      *                                        false equates to UNDERLINE_NONE
      *

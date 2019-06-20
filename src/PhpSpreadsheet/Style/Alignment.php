@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Style;
+namespace Wya\PhpSpreadsheet\Style;
 
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
 
 class Alignment extends Supervisor
 {
@@ -128,8 +128,8 @@ class Alignment extends Supervisor
      * <code>
      * $spreadsheet->getActiveSheet()->getStyle('B2')->getAlignment()->applyFromArray(
      *        [
-     *            'horizontal'   => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
-     *            'vertical'     => \PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER,
+     *            'horizontal'   => \Wya\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+     *            'vertical'     => \Wya\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER,
      *            'textRotation' => 0,
      *            'wrapText'     => TRUE
      *        ]

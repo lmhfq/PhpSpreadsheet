@@ -1,8 +1,8 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Cell\AdvancedValueBinder;
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Cell\AdvancedValueBinder;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\IOFactory;
 
 require __DIR__ . '/../Header.php';
 

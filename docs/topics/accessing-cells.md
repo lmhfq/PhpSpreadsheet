@@ -178,7 +178,7 @@ calculate the correct Excel timestamp, and set a number format mask.
 ``` php
 // Get the current date/time and convert to an Excel date/time
 $dateTimeNow = time();
-$excelDateValue = \PhpOffice\PhpSpreadsheet\Shared\Date::PHPToExcel( $dateTimeNow );
+$excelDateValue = \Wya\PhpSpreadsheet\Shared\Date::PHPToExcel( $dateTimeNow );
 // Set cell A6 with the Excel date/time value
 $spreadsheet->getActiveSheet()->setCellValue(
     'A6',
@@ -188,7 +188,7 @@ $spreadsheet->getActiveSheet()->setCellValue(
 $spreadsheet->getActiveSheet()->getStyle('A6')
     ->getNumberFormat()
     ->setFormatCode(
-        \PhpOffice\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DATETIME
+        \Wya\PhpSpreadsheet\Style\NumberFormat::FORMAT_DATE_DATETIME
     );
 ```
 
@@ -215,7 +215,7 @@ not converted to a number.
 $spreadsheet->getActiveSheet()->setCellValueExplicit(
     'A8',
     "01513789642",
-    \PhpOffice\PhpSpreadsheet\Cell\DataType::TYPE_STRING
+    \Wya\PhpSpreadsheet\Cell\DataType::TYPE_STRING
 );
 ```
 
@@ -410,7 +410,7 @@ Below is an example where we read all the values in a worksheet and
 display them in a table.
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader('Xlsx');
 $reader->setReadDataOnly(TRUE);
 $spreadsheet = $reader->load("test.xlsx");
 
@@ -457,7 +457,7 @@ Below is an example where we read all the values in a worksheet and
 display them in a table.
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader('Xlsx');
 $reader->setReadDataOnly(TRUE);
 $spreadsheet = $reader->load("test.xlsx");
 
@@ -465,7 +465,7 @@ $worksheet = $spreadsheet->getActiveSheet();
 // Get the highest row and column numbers referenced in the worksheet
 $highestRow = $worksheet->getHighestRow(); // e.g. 10
 $highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
-$highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
+$highestColumnIndex = \Wya\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
 
 echo '<table>' . "\n";
 for ($row = 1; $row <= $highestRow; ++$row) {
@@ -483,7 +483,7 @@ Alternatively, you can take advantage of PHP's "Perl-style" character
 incrementors to loop through the cells by coordinate:
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader('Xlsx');
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader('Xlsx');
 $reader->setReadDataOnly(TRUE);
 $spreadsheet = $reader->load("test.xlsx");
 
@@ -515,14 +515,14 @@ while `$col !=` the incremented highest column.
 ## Using value binders to facilitate data entry
 
 Internally, PhpSpreadsheet uses a default
-`\PhpOffice\PhpSpreadsheet\Cell\IValueBinder` implementation
-(\PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder) to determine data
+`\Wya\PhpSpreadsheet\Cell\IValueBinder` implementation
+(\Wya\PhpSpreadsheet\Cell\DefaultValueBinder) to determine data
 types of entered data using a cell's `setValue()` method (the
 `setValueExplicit()` method bypasses this check).
 
 Optionally, the default behaviour of PhpSpreadsheet can be modified,
 allowing easier data entry. For example, a
-`\PhpOffice\PhpSpreadsheet\Cell\AdvancedValueBinder` class is available.
+`\Wya\PhpSpreadsheet\Cell\AdvancedValueBinder` class is available.
 It automatically converts percentages, number in scientific format, and
 dates entered as strings to the correct format, also setting the cell's
 style information. The following example demonstrates how to set the
@@ -533,10 +533,10 @@ value binder in PhpSpreadsheet:
 require_once 'src/Boostrap.php';
 
 // Set value binder
-\PhpOffice\PhpSpreadsheet\Cell\Cell::setValueBinder( new \PhpOffice\PhpSpreadsheet\Cell\AdvancedValueBinder() );
+\Wya\PhpSpreadsheet\Cell\Cell::setValueBinder( new \Wya\PhpSpreadsheet\Cell\AdvancedValueBinder() );
 
 // Create new Spreadsheet object
-$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+$spreadsheet = new \Wya\PhpSpreadsheet\Spreadsheet();
 
 // ...
 // Add some data, resembling some different data types
@@ -551,6 +551,6 @@ $spreadsheet->getActiveSheet()->setCellValue('B5', '21 December 1983');
 
 **Creating your own value binder is easy.** When advanced value binding
 is required, you can implement the
-`\PhpOffice\PhpSpreadsheet\Cell\IValueBinder` interface or extend the
-`\PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder` or
-`\PhpOffice\PhpSpreadsheet\Cell\AdvancedValueBinder` classes.
+`\Wya\PhpSpreadsheet\Cell\IValueBinder` interface or extend the
+`\Wya\PhpSpreadsheet\Cell\DefaultValueBinder` or
+`\Wya\PhpSpreadsheet\Cell\AdvancedValueBinder` classes.

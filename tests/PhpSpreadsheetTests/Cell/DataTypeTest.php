@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Cell;
+namespace Wya\PhpSpreadsheetTests\Cell;
 
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Cell\DataType;
 use PHPUnit\Framework\TestCase;
 
 class DataTypeTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader;
+namespace Wya\PhpSpreadsheet\Reader;
 
 interface IReadFilter
 {

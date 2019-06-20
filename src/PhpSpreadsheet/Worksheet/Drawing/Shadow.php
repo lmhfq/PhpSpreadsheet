@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
+namespace Wya\PhpSpreadsheet\Worksheet\Drawing;
 
-use PhpOffice\PhpSpreadsheet\IComparable;
-use PhpOffice\PhpSpreadsheet\Style\Color;
+use Wya\PhpSpreadsheet\IComparable;
+use Wya\PhpSpreadsheet\Style\Color;
 
 class Shadow implements IComparable
 {

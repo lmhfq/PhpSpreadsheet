@@ -8,40 +8,40 @@ confused with PhpSpreadsheet versions.
 
 ### Bugfixes
 
-- Fix for Writing an Open Document cell with non-numeric formula - @goncons [#397](https://github.com/PHPOffice/PHPExcel/issues/397)
-- Avoid potential divide by zero in basedrawing - @sarciszewski [#329](https://github.com/PHPOffice/PHPExcel/issues/329)
-- XML External Entity (XXE) Processing, different behaviour between simplexml_load_string() and simplexml_load_file(). - @ymaerschalck [#405](https://github.com/PHPOffice/PHPExcel/issues/405)
+- Fix for Writing an Open Document cell with non-numeric formula - @goncons [#397](https://github.com/Wya/PHPExcel/issues/397)
+- Avoid potential divide by zero in basedrawing - @sarciszewski [#329](https://github.com/Wya/PHPExcel/issues/329)
+- XML External Entity (XXE) Processing, different behaviour between simplexml_load_string() and simplexml_load_file(). - @ymaerschalck [#405](https://github.com/Wya/PHPExcel/issues/405)
 - Fix to ensure that current cell is maintained when executing formula calculations - @MarkBaker
-- Keep/set the value on Reader _loadSheetsOnly as NULL, courtesy of Restless-ET - @MarkBaker [#350](https://github.com/PHPOffice/PHPExcel/issues/350)
+- Keep/set the value on Reader _loadSheetsOnly as NULL, courtesy of Restless-ET - @MarkBaker [#350](https://github.com/Wya/PHPExcel/issues/350)
 - Loading an Excel 2007 spreadsheet throws an "Autofilter must be set on a range of cells" exception - @MarkBaker [CodePlex #18105](https://phpexcel.codeplex.com/workitem/18105)
-- Fix to autoloader registration for backward compatibility with PHP 5.2.0 not accepting the prepend flag - @MarkBaker [#388](https://github.com/PHPOffice/PHPExcel/issues/388)
-- DOM loadHTMLFile() failing with options flags when using PHP < 5.4.0 - @MarkBaker [#384](https://github.com/PHPOffice/PHPExcel/issues/384)
+- Fix to autoloader registration for backward compatibility with PHP 5.2.0 not accepting the prepend flag - @MarkBaker [#388](https://github.com/Wya/PHPExcel/issues/388)
+- DOM loadHTMLFile() failing with options flags when using PHP < 5.4.0 - @MarkBaker [#384](https://github.com/Wya/PHPExcel/issues/384)
 - Fix for percentage operator in formulae for BIFF Writer - @MarkBaker
 - Fix to getStyle() call for cell object - @MarkBaker
 - Discard Autofilters in Excel2007 Reader when filter range isn't a valid range - @MarkBaker
-- Fix invalid NA return in VLOOKUP - @frozenstupidity [#423](https://github.com/PHPOffice/PHPExcel/issues/423)
+- Fix invalid NA return in VLOOKUP - @frozenstupidity [#423](https://github.com/Wya/PHPExcel/issues/423)
 - "No Impact" conditional formatting fix for NumberFormat - @wiseloren [CodePlex #21454](https://phpexcel.codeplex.com/workitem/21454)
-- Bug in Excel2003XML reader, parsing merged cells - @bobwitlox [#467](https://github.com/PHPOffice/PHPExcel/issues/467)
-- Fix for CEIL() and FLOOR() when number argument is zero - @MarkBaker [#302](https://github.com/PHPOffice/PHPExcel/issues/302)
+- Bug in Excel2003XML reader, parsing merged cells - @bobwitlox [#467](https://github.com/Wya/PHPExcel/issues/467)
+- Fix for CEIL() and FLOOR() when number argument is zero - @MarkBaker [#302](https://github.com/Wya/PHPExcel/issues/302)
 
 ### General
 
 - Remove cells cleanly when calling RemoveRow() or RemoveColumn() - @MarkBaker
 - Small performance improvement for autosize columns - @MarkBaker
-- Change the getter/setter for zeroHeight to camel case - @frost-nzcr4 [#379](https://github.com/PHPOffice/PHPExcel/issues/379)
-- DefaultValueBinder is too much aggressive when converting string to numeric - @MarkBaker [#394](https://github.com/PHPOffice/PHPExcel/issues/394)
+- Change the getter/setter for zeroHeight to camel case - @frost-nzcr4 [#379](https://github.com/Wya/PHPExcel/issues/379)
+- DefaultValueBinder is too much aggressive when converting string to numeric - @MarkBaker [#394](https://github.com/Wya/PHPExcel/issues/394)
 - Default precalculate formulas to false for writers - @MarkBaker
 - Set default Cyclic Reference behaviour to 1 to eliminate exception when using a single cyclic iteration in formulae - @MarkBaker
 
 ### Features
 
-- Some Excel writer libraries erroneously use Codepage 21010 for UTF-16LE - @MarkBaker [#396](https://github.com/PHPOffice/PHPExcel/issues/396)
-- Methods to manage most of the existing options for Chart Axis, Major Grid-lines and Minor Grid-lines - @WiktrzGE [#404](https://github.com/PHPOffice/PHPExcel/issues/404)
-- ODS read/write comments in the cell - @frost-nzcr4 [#403](https://github.com/PHPOffice/PHPExcel/issues/403)
-- Additional Mac CJK codepage definitions - @CQD [#389](https://github.com/PHPOffice/PHPExcel/issues/389)
-- Update Worksheet.php getStyleByColumnAndRow() to allow a range of cells rather than just a single cell - @bolovincev [#269](https://github.com/PHPOffice/PHPExcel/issues/269)
+- Some Excel writer libraries erroneously use Codepage 21010 for UTF-16LE - @MarkBaker [#396](https://github.com/Wya/PHPExcel/issues/396)
+- Methods to manage most of the existing options for Chart Axis, Major Grid-lines and Minor Grid-lines - @WiktrzGE [#404](https://github.com/Wya/PHPExcel/issues/404)
+- ODS read/write comments in the cell - @frost-nzcr4 [#403](https://github.com/Wya/PHPExcel/issues/403)
+- Additional Mac CJK codepage definitions - @CQD [#389](https://github.com/Wya/PHPExcel/issues/389)
+- Update Worksheet.php getStyleByColumnAndRow() to allow a range of cells rather than just a single cell - @bolovincev [#269](https://github.com/Wya/PHPExcel/issues/269)
 - New methods added for testing cell status within merge groups - @MarkBaker
-- Handling merge cells in HTML Reader - @cifren/MBaker [#205](https://github.com/PHPOffice/PHPExcel/issues/205)
+- Handling merge cells in HTML Reader - @cifren/MBaker [#205](https://github.com/Wya/PHPExcel/issues/205)
 - Helper to convert basic HTML markup to a Rich Text object - @MarkBaker
 - Improved Iterators - @MarkBaker
     - New Column Iterator
@@ -62,47 +62,47 @@ confused with PhpSpreadsheet versions.
 - Out of memory in style/supervisor.php - @MarkBaker [CodePlex #19968](https://phpexcel.codeplex.com/workitem/19968)
 - Style error with merged cells in PDF Writer - @MarkBaker
 - Problem with cloning worksheets - @MarkBaker
-- Bug fix reading Open Office files - @tavoarcila [#259](https://github.com/PHPOffice/PHPExcel/issues/259)
+- Bug fix reading Open Office files - @tavoarcila [#259](https://github.com/Wya/PHPExcel/issues/259)
 - Serious bug in absolute cell reference used in shared formula - @MarkBaker [CodePlex #20397](https://phpexcel.codeplex.com/workitem/20397)
-    - Would also have affected insert/delete column/row- CHOOSE() returns "#VALUE!" if the 1st entry is chosen - @RomanSyroeshko [#267](https://github.com/PHPOffice/PHPExcel/issues/267)
-- When duplicating styles, styles shifted by one column to the right - @Gemorroj [#268](https://github.com/PHPOffice/PHPExcel/issues/268)
-    - Fix also applied to duplicating conditional styles- Fix for formulae that reference a sheet whose name begins with a digit: - @IndrekHaav [#212](https://github.com/PHPOffice/PHPExcel/issues/212)
+    - Would also have affected insert/delete column/row- CHOOSE() returns "#VALUE!" if the 1st entry is chosen - @RomanSyroeshko [#267](https://github.com/Wya/PHPExcel/issues/267)
+- When duplicating styles, styles shifted by one column to the right - @Gemorroj [#268](https://github.com/Wya/PHPExcel/issues/268)
+    - Fix also applied to duplicating conditional styles- Fix for formulae that reference a sheet whose name begins with a digit: - @IndrekHaav [#212](https://github.com/Wya/PHPExcel/issues/212)
     - these were erroneously identified as numeric values, causing the parser to throw an undefined variable error.- Fixed undefined variable error due to $styleArray being used before it's initialised - @IndrekHaav [CodePlex #16208](https://phpexcel.codeplex.com/workitem/16208)
-- ISTEXT() return wrong result if referencing an empty but formatted cell - @PowerKiKi [#273](https://github.com/PHPOffice/PHPExcel/issues/273)
-- Binary comparison of strings are case insensitive - @PowerKiKi [#270](https://github.com/PHPOffice/PHPExcel/issues/270), [#31](https://github.com/PHPOffice/PHPExcel/issues/31)
-- Insert New Row/Column Before is not correctly updating formula references - @MarkBaker [#275](https://github.com/PHPOffice/PHPExcel/issues/275)
-- Passing an array of cells to _generateRow() in the HTML/PDF Writer causes caching problems with last cell in the range - @MarkBaker [#257](https://github.com/PHPOffice/PHPExcel/issues/257)
-- Fix to empty worksheet garbage collection when using cell caching - @MarkBaker [#193](https://github.com/PHPOffice/PHPExcel/issues/193)
-- Excel2007 does not correctly mark rows as hidden - @Jazzo [#248](https://github.com/PHPOffice/PHPExcel/issues/248)
-- Fixed typo in Chart/Layout set/getYMode() - @Roy Shahbazian [#299](https://github.com/PHPOffice/PHPExcel/issues/299)
-- Fatal error: Call to a member function cellExists() line: 3327 in calculation.php if referenced worksheet doesn't exist - @EliuFlorez [#279](https://github.com/PHPOffice/PHPExcel/issues/279)
-- AdvancedValueBinder "Division by zero"-error - @MarkBaker [#290](https://github.com/PHPOffice/PHPExcel/issues/290)
+- ISTEXT() return wrong result if referencing an empty but formatted cell - @PowerKiKi [#273](https://github.com/Wya/PHPExcel/issues/273)
+- Binary comparison of strings are case insensitive - @PowerKiKi [#270](https://github.com/Wya/PHPExcel/issues/270), [#31](https://github.com/Wya/PHPExcel/issues/31)
+- Insert New Row/Column Before is not correctly updating formula references - @MarkBaker [#275](https://github.com/Wya/PHPExcel/issues/275)
+- Passing an array of cells to _generateRow() in the HTML/PDF Writer causes caching problems with last cell in the range - @MarkBaker [#257](https://github.com/Wya/PHPExcel/issues/257)
+- Fix to empty worksheet garbage collection when using cell caching - @MarkBaker [#193](https://github.com/Wya/PHPExcel/issues/193)
+- Excel2007 does not correctly mark rows as hidden - @Jazzo [#248](https://github.com/Wya/PHPExcel/issues/248)
+- Fixed typo in Chart/Layout set/getYMode() - @Roy Shahbazian [#299](https://github.com/Wya/PHPExcel/issues/299)
+- Fatal error: Call to a member function cellExists() line: 3327 in calculation.php if referenced worksheet doesn't exist - @EliuFlorez [#279](https://github.com/Wya/PHPExcel/issues/279)
+- AdvancedValueBinder "Division by zero"-error - @MarkBaker [#290](https://github.com/Wya/PHPExcel/issues/290)
 - Adding Sheet to Workbook Bug - @MarkBaker [CodePlex #20604](https://phpexcel.codeplex.com/workitem/20604)
 - Calculation engine incorrectly evaluates empty cells as #VALUE - @MarkBaker [CodePlex #20703](https://phpexcel.codeplex.com/workitem/20703)
 - Formula references to cell on another sheet in ODS files - @MarkBaker [CodePlex #20760](https://phpexcel.codeplex.com/workitem/20760)
 
 ### Features
 
-- LibreOffice created XLSX files results in an empty file. - @MarkBaker [#321](https://github.com/PHPOffice/PHPExcel/issues/321), [#158](https://github.com/PHPOffice/PHPExcel/issues/158), [CodePlex #17824](https://phpexcel.codeplex.com/workitem/17824)
+- LibreOffice created XLSX files results in an empty file. - @MarkBaker [#321](https://github.com/Wya/PHPExcel/issues/321), [#158](https://github.com/Wya/PHPExcel/issues/158), [CodePlex #17824](https://phpexcel.codeplex.com/workitem/17824)
 - Implementation of the Excel HLOOKUP() function - @amerov
 - Added "Quote Prefix" to style settings (Excel2007 Reader and Writer only) - @MarkBaker
 - Added Horizontal FILL alignment for Excel5 and Excel2007 Readers/Writers, and Horizontal DISTRIBUTED alignment for Excel2007 Reader/Writer - @MarkBaker
-- Add support for reading protected (RC4 encrypted) .xls files - @trvrnrth [#261](https://github.com/PHPOffice/PHPExcel/issues/261)
+- Add support for reading protected (RC4 encrypted) .xls files - @trvrnrth [#261](https://github.com/Wya/PHPExcel/issues/261)
 
 ### General
 
-- Adding support for macros, Ribbon in Excel 2007 - @LWol [#252](https://github.com/PHPOffice/PHPExcel/issues/252)
+- Adding support for macros, Ribbon in Excel 2007 - @LWol [#252](https://github.com/Wya/PHPExcel/issues/252)
 - Remove array_shift in ReferenceHelper::insertNewBefore improves column or row delete speed - @cdhutch [CodePlex #20055](https://phpexcel.codeplex.com/workitem/20055)
 - Improve stock chart handling and rendering, with help from Swashata Ghosh - @MarkBaker
 - Fix to calculation properties for Excel2007 so that the opening application will only recalculate on load if it's actually required - @MarkBaker
 - Modified Excel2007 Writer to default preCalculateFormulas to false - @MarkBaker
-    - Note that autosize columns will still recalculate affected formulae internally- Functionality to getHighestRow() for a specified column, and getHighestColumn() for a specified row - @dresenhista [#242](https://github.com/PHPOffice/PHPExcel/issues/242)
-- Modify PHPExcel_Reader_Excel2007 to use zipClass from PHPExcel_Settings::getZipClass() - @adamriyadi [#247](https://github.com/PHPOffice/PHPExcel/issues/247)
+    - Note that autosize columns will still recalculate affected formulae internally- Functionality to getHighestRow() for a specified column, and getHighestColumn() for a specified row - @dresenhista [#242](https://github.com/Wya/PHPExcel/issues/242)
+- Modify PHPExcel_Reader_Excel2007 to use zipClass from PHPExcel_Settings::getZipClass() - @adamriyadi [#247](https://github.com/Wya/PHPExcel/issues/247)
     - This allows the use of PCLZip when reading for people that don't have access to ZipArchive
 ### Security
 
-- Convert properties to string in OOCalc reader - @infojunkie [#276](https://github.com/PHPOffice/PHPExcel/issues/276)
-- Disable libxml external entity loading by default. - @maartenba [#322](https://github.com/PHPOffice/PHPExcel/issues/322)
+- Convert properties to string in OOCalc reader - @infojunkie [#276](https://github.com/Wya/PHPExcel/issues/276)
+- Disable libxml external entity loading by default. - @maartenba [#322](https://github.com/Wya/PHPExcel/issues/322)
     - This is to prevent XML External Entity Processing (XXE) injection attacks (see https://websec.io/2012/08/27/Preventing-XEE-in-PHP.html for an explanation of XXE injection).
     - Reference CVE-2014-2054
 
@@ -113,41 +113,41 @@ confused with PhpSpreadsheet versions.
 - Include charts option for HTML Writer - @MarkBaker
 - Added composer file - @MarkBaker
 - cache_in_memory_gzip "eats" last worksheet line, cache_in_memory doesn't - @MarkBaker [CodePlex #18844](https://phpexcel.codeplex.com/workitem/18844)
-- echo statements in HTML.php - @MarkBaker [#104](https://github.com/PHPOffice/PHPExcel/issues/104)
+- echo statements in HTML.php - @MarkBaker [#104](https://github.com/Wya/PHPExcel/issues/104)
 
 ### Bugfixes
 
 - Added getStyle() method to Cell object - @MarkBaker
 - Error in PHPEXCEL/Calculation.php script on line 2976 (stack pop check) - @Asker [CodePlex #18777](https://phpexcel.codeplex.com/workitem/18777)
 - CSV files without a file extension being identified as HTML - @MarkBaker [CodePlex #18794](https://phpexcel.codeplex.com/workitem/18794)
-- Wrong check for maximum number of rows in Excel5 Writer - @AndreKR [#66](https://github.com/PHPOffice/PHPExcel/issues/66)
-- Cache directory for DiscISAM cache storage cannot be set - @MarkBaker [#67](https://github.com/PHPOffice/PHPExcel/issues/67)
+- Wrong check for maximum number of rows in Excel5 Writer - @AndreKR [#66](https://github.com/Wya/PHPExcel/issues/66)
+- Cache directory for DiscISAM cache storage cannot be set - @MarkBaker [#67](https://github.com/Wya/PHPExcel/issues/67)
 - Fix to Excel2007 Reader for hyperlinks with an anchor fragment (following a #), otherwise they were treated as sheet references - @MarkBaker [CodePlex #17976](https://phpexcel.codeplex.com/workitem/17976)
 - getSheetNames() fails on numeric (floating point style) names with trailing zeroes - @MarkBaker [CodePlex #18963](https://phpexcel.codeplex.com/workitem/18963)
 - Modify cell's getCalculatedValue() method to return the content of RichText objects rather than the RichText object itself - @MarkBaker
-- Fixed formula/formatting bug when removing rows - @techhead [#70](https://github.com/PHPOffice/PHPExcel/issues/70)
-- Fix to cellExists for non-existent namedRanges - @alexgann [#63](https://github.com/PHPOffice/PHPExcel/issues/63)
-- Sheet View in Excel5 Writer - @Progi1984 [#22](https://github.com/PHPOffice/PHPExcel/issues/22)
-- PHPExcel_Worksheet::getCellCollection() may not return last cached cell - @amironov [#82](https://github.com/PHPOffice/PHPExcel/issues/82)
+- Fixed formula/formatting bug when removing rows - @techhead [#70](https://github.com/Wya/PHPExcel/issues/70)
+- Fix to cellExists for non-existent namedRanges - @alexgann [#63](https://github.com/Wya/PHPExcel/issues/63)
+- Sheet View in Excel5 Writer - @Progi1984 [#22](https://github.com/Wya/PHPExcel/issues/22)
+- PHPExcel_Worksheet::getCellCollection() may not return last cached cell - @amironov [#82](https://github.com/Wya/PHPExcel/issues/82)
 - Rich Text containing UTF-8 characters creating unreadable content with Excel5 Writer - @teso [CodePlex #18551](https://phpexcel.codeplex.com/workitem/18551)
 - Work item GH-8/CP11704 : Conditional formatting in Excel 5 Writer - @Progi1984
-- canRead() Error for GoogleDocs ODS files: in ODS files from Google Docs there is no mimetype file - @MarkBaker [#113](https://github.com/PHPOffice/PHPExcel/issues/113)
-- "Sheet index is out of bounds." Exception - @MarkBaker [#80](https://github.com/PHPOffice/PHPExcel/issues/80)
-- Fixed number format fatal error - @ccorliss [#105](https://github.com/PHPOffice/PHPExcel/issues/105)
+- canRead() Error for GoogleDocs ODS files: in ODS files from Google Docs there is no mimetype file - @MarkBaker [#113](https://github.com/Wya/PHPExcel/issues/113)
+- "Sheet index is out of bounds." Exception - @MarkBaker [#80](https://github.com/Wya/PHPExcel/issues/80)
+- Fixed number format fatal error - @ccorliss [#105](https://github.com/Wya/PHPExcel/issues/105)
 - Add DROP TABLE in destructor for SQLite and SQLite3 cache controllers - @MarkBaker
-- Fix merged-cell borders on HTML/PDF output - @alexgann [#154](https://github.com/PHPOffice/PHPExcel/issues/154)
-- Fix: Hyperlinks break when removing rows - @Shanto [#161](https://github.com/PHPOffice/PHPExcel/issues/161)
-- Fix Extra Table Row From Images and Charts - @neclimdul [#166](https://github.com/PHPOffice/PHPExcel/issues/166)
+- Fix merged-cell borders on HTML/PDF output - @alexgann [#154](https://github.com/Wya/PHPExcel/issues/154)
+- Fix: Hyperlinks break when removing rows - @Shanto [#161](https://github.com/Wya/PHPExcel/issues/161)
+- Fix Extra Table Row From Images and Charts - @neclimdul [#166](https://github.com/Wya/PHPExcel/issues/166)
 
 ### General
 
-- Single cell print area - @MarkBaker [#130](https://github.com/PHPOffice/PHPExcel/issues/130)
-- Improved AdvancedValueBinder for currency - @kea [#69](https://github.com/PHPOffice/PHPExcel/issues/69)
+- Single cell print area - @MarkBaker [#130](https://github.com/Wya/PHPExcel/issues/130)
+- Improved AdvancedValueBinder for currency - @kea [#69](https://github.com/Wya/PHPExcel/issues/69)
 - Fix for environments where there is no access to /tmp but to upload_tmp_dir - @MarkBaker
-    - Provided an option to set the sys_get_temp_dir() call to use the upload_tmp_dir; though by default the standard temp directory will still be used- Search style by identity in PHPExcel_Worksheet::duplicateStyle() - @amironov  [#84](https://github.com/PHPOffice/PHPExcel/issues/84)
-- Fill SheetView IO in Excel5 - @karak [#85](https://github.com/PHPOffice/PHPExcel/issues/85)
+    - Provided an option to set the sys_get_temp_dir() call to use the upload_tmp_dir; though by default the standard temp directory will still be used- Search style by identity in PHPExcel_Worksheet::duplicateStyle() - @amironov  [#84](https://github.com/Wya/PHPExcel/issues/84)
+- Fill SheetView IO in Excel5 - @karak [#85](https://github.com/Wya/PHPExcel/issues/85)
 - Memory and Speed improvements in PHPExcel_Reader_Excel5 - @cfhay [CodePlex #18958](https://phpexcel.codeplex.com/workitem/18958)
-- Modify listWorksheetNames() and listWorksheetInfo to use XMLReader with streamed XML rather than SimpleXML - @MarkBaker [#78](https://github.com/PHPOffice/PHPExcel/issues/78)
+- Modify listWorksheetNames() and listWorksheetInfo to use XMLReader with streamed XML rather than SimpleXML - @MarkBaker [#78](https://github.com/Wya/PHPExcel/issues/78)
 - Restructuring of PHPExcel Exceptions - @dbonsch
 - Refactor Calculation Engine from singleton to a Multiton - @MarkBaker
     - Ensures that calculation cache is maintained independently for different workbooks

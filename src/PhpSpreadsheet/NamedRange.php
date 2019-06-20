@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 class NamedRange
 {

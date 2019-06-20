@@ -1,7 +1,7 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Helper\Html as HtmlHelper;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Helper\Html as HtmlHelper;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../Header.php';
 

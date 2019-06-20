@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared;
+namespace Wya\PhpSpreadsheet\Shared;
 
 class Drawing
 {
@@ -38,11 +38,11 @@ class Drawing
      * This gives a conversion factor of 7. Also, we assume that pixels and font size are proportional.
      *
      * @param int $pValue Value in pixels
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $pDefaultFont Default font of the workbook
+     * @param \Wya\PhpSpreadsheet\Style\Font $pDefaultFont Default font of the workbook
      *
      * @return int Value in cell dimension
      */
-    public static function pixelsToCellDimension($pValue, \PhpOffice\PhpSpreadsheet\Style\Font $pDefaultFont)
+    public static function pixelsToCellDimension($pValue, \Wya\PhpSpreadsheet\Style\Font $pDefaultFont)
     {
         // Font name and size
         $name = $pDefaultFont->getName();
@@ -64,11 +64,11 @@ class Drawing
      * Convert column width from (intrinsic) Excel units to pixels.
      *
      * @param float $pValue Value in cell dimension
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $pDefaultFont Default font of the workbook
+     * @param \Wya\PhpSpreadsheet\Style\Font $pDefaultFont Default font of the workbook
      *
      * @return int Value in pixels
      */
-    public static function cellDimensionToPixels($pValue, \PhpOffice\PhpSpreadsheet\Style\Font $pDefaultFont)
+    public static function cellDimensionToPixels($pValue, \Wya\PhpSpreadsheet\Style\Font $pDefaultFont)
     {
         // Font name and size
         $name = $pDefaultFont->getName();

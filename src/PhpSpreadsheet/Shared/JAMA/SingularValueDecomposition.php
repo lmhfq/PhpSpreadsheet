@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\JAMA;
+namespace Wya\PhpSpreadsheet\Shared\JAMA;
 
 /**
  *    For an m-by-n matrix A with m >= n, the singular value decomposition is

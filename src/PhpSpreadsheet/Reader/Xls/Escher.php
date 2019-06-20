@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader\Xls;
+namespace Wya\PhpSpreadsheet\Reader\Xls;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Reader\Xls;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DgContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer\SpContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE\Blip;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Reader\Xls;
+use Wya\PhpSpreadsheet\Shared\Escher\DgContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer\SpContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE\Blip;
 
 class Escher
 {
@@ -57,7 +57,7 @@ class Escher
     /**
      * The object to be returned by the reader. Modified during load.
      *
-     * @var BSE|BstoreContainer|DgContainer|DggContainer|\PhpOffice\PhpSpreadsheet\Shared\Escher|SpContainer|SpgrContainer
+     * @var BSE|BstoreContainer|DgContainer|DggContainer|\Wya\PhpSpreadsheet\Shared\Escher|SpContainer|SpgrContainer
      */
     private $object;
 
@@ -76,7 +76,7 @@ class Escher
      *
      * @param string $data
      *
-     * @return BSE|BstoreContainer|DgContainer|DggContainer|\PhpOffice\PhpSpreadsheet\Shared\Escher|SpContainer|SpgrContainer
+     * @return BSE|BstoreContainer|DgContainer|DggContainer|\Wya\PhpSpreadsheet\Shared\Escher|SpContainer|SpgrContainer
      */
     public function load($data)
     {

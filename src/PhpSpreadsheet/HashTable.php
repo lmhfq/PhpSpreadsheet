@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
 class HashTable
 {
@@ -19,7 +19,7 @@ class HashTable
     protected $keyMap = [];
 
     /**
-     * Create a new \PhpOffice\PhpSpreadsheet\HashTable.
+     * Create a new \Wya\PhpSpreadsheet\HashTable.
      *
      * @param IComparable[] $pSource Optional source array to create HashTable from
      *

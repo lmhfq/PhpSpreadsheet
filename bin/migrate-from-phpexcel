@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-use PhpOffice\PhpSpreadsheet\Helper\Migrator;
+use Wya\PhpSpreadsheet\Helper\Migrator;
 
 require_once __DIR__ . '/../src/Bootstrap.php';
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\RichText;
+namespace Wya\PhpSpreadsheet\RichText;
 
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Exception;
-use PhpOffice\PhpSpreadsheet\IComparable;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Exception;
+use Wya\PhpSpreadsheet\IComparable;
 
 class RichText implements IComparable
 {

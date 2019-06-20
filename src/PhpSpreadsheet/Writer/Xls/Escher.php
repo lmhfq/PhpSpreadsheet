@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
+namespace Wya\PhpSpreadsheet\Writer\Xls;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DgContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer\SpContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE;
-use PhpOffice\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE\Blip;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Shared\Escher\DgContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DgContainer\SpgrContainer\SpContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE;
+use Wya\PhpSpreadsheet\Shared\Escher\DggContainer\BstoreContainer\BSE\Blip;
 
 class Escher
 {
@@ -58,7 +58,7 @@ class Escher
         $this->data = '';
 
         switch (get_class($this->object)) {
-            case \PhpOffice\PhpSpreadsheet\Shared\Escher::class:
+            case \Wya\PhpSpreadsheet\Shared\Escher::class:
                 if ($dggContainer = $this->object->getDggContainer()) {
                     $writer = new self($dggContainer);
                     $this->data = $writer->close();

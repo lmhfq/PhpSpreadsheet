@@ -1,7 +1,7 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Cell\DataValidation;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Cell\DataValidation;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../Header.php';
 

@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Ods;
+namespace Wya\PhpSpreadsheet\Writer\Ods;
 
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
 
 class MetaInf extends WriterPart
 {
     /**
      * Write META-INF/manifest.xml to XML format.
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      *
      * @return string XML Output
      */

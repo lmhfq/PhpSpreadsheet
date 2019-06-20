@@ -1,23 +1,23 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+namespace Wya\PhpSpreadsheet\Writer\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
-use PhpOffice\PhpSpreadsheet\Style\Conditional;
-use PhpOffice\PhpSpreadsheet\Worksheet\AutoFilter\Column;
-use PhpOffice\PhpSpreadsheet\Worksheet\AutoFilter\Column\Rule;
-use PhpOffice\PhpSpreadsheet\Worksheet\SheetView;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet as PhpspreadsheetWorksheet;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Style\Conditional;
+use Wya\PhpSpreadsheet\Worksheet\AutoFilter\Column;
+use Wya\PhpSpreadsheet\Worksheet\AutoFilter\Column\Rule;
+use Wya\PhpSpreadsheet\Worksheet\SheetView;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet as PhpspreadsheetWorksheet;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 /**
  * @category   PhpSpreadsheet
  *
- * @copyright  Copyright (c) 2006 - 2015 PhpSpreadsheet (https://github.com/PHPOffice/PhpSpreadsheet)
+ * @copyright  Copyright (c) 2006 - 2015 PhpSpreadsheet (https://github.com/Wya/PhpSpreadsheet)
  */
 class Worksheet extends WriterPart
 {

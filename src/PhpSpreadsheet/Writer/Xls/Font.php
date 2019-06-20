@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
+namespace Wya\PhpSpreadsheet\Writer\Xls;
 
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
 
 class Font
 {
@@ -16,16 +16,16 @@ class Font
     /**
      * Font.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Style\Font
+     * @var \Wya\PhpSpreadsheet\Style\Font
      */
     private $font;
 
     /**
      * Constructor.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font
+     * @param \Wya\PhpSpreadsheet\Style\Font $font
      */
-    public function __construct(\PhpOffice\PhpSpreadsheet\Style\Font $font)
+    public function __construct(\Wya\PhpSpreadsheet\Style\Font $font)
     {
         $this->colorIndex = 0x7FFF;
         $this->font = $font;
@@ -60,7 +60,7 @@ class Font
             $sss = 0;
         }
         $bFamily = 0; // Font family
-        $bCharSet = \PhpOffice\PhpSpreadsheet\Shared\Font::getCharsetFromFontName($this->font->getName()); // Character set
+        $bCharSet = \Wya\PhpSpreadsheet\Shared\Font::getCharsetFromFontName($this->font->getName()); // Character set
 
         $record = 0x31; // Record identifier
         $reserved = 0x00; // Reserved
@@ -124,11 +124,11 @@ class Font
      * @var array of int
      */
     private static $mapUnderline = [
-        \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_NONE => 0x00,
-        \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLE => 0x01,
-        \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLE => 0x02,
-        \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLEACCOUNTING => 0x21,
-        \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLEACCOUNTING => 0x22,
+        \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_NONE => 0x00,
+        \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLE => 0x01,
+        \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLE => 0x02,
+        \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLEACCOUNTING => 0x21,
+        \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLEACCOUNTING => 0x22,
     ];
 
     /**

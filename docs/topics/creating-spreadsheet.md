@@ -24,7 +24,7 @@ the [Reading Files](./reading-files.md) document.
 $inputFileName = './sampleData/example1.xls';
 
 /** Load $inputFileName to a Spreadsheet object **/
-$spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
+$spreadsheet = \Wya\PhpSpreadsheet\IOFactory::load($inputFileName);
 ```
 
 ### Creating a new workbook
@@ -34,7 +34,7 @@ then you simply need to instantiate it as a new Spreadsheet object.
 
 ``` php
 /** Create a new Spreadsheet Object **/
-$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+$spreadsheet = new \Wya\PhpSpreadsheet\Spreadsheet();
 ```
 
 A new workbook will always be created with a single worksheet.

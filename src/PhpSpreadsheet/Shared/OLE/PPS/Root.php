@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\OLE\PPS;
+namespace Wya\PhpSpreadsheet\Shared\OLE\PPS;
 
 // vim: set expandtab tabstop=4 shiftwidth=4:
 // +----------------------------------------------------------------------+
@@ -20,9 +20,9 @@ namespace PhpOffice\PhpSpreadsheet\Shared\OLE\PPS;
 // | Based on OLE::Storage_Lite by Kawai, Takanori                        |
 // +----------------------------------------------------------------------+
 //
-use PhpOffice\PhpSpreadsheet\Shared\OLE;
-use PhpOffice\PhpSpreadsheet\Shared\OLE\PPS;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Shared\OLE;
+use Wya\PhpSpreadsheet\Shared\OLE\PPS;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 /**
  * Class for creating Root PPS's for OLE containers.
@@ -67,7 +67,7 @@ class Root extends PPS
      */
     public function __construct($time_1st, $time_2nd, $raChild)
     {
-        $this->tempDirectory = \PhpOffice\PhpSpreadsheet\Shared\File::sysGetTempDir();
+        $this->tempDirectory = \Wya\PhpSpreadsheet\Shared\File::sysGetTempDir();
 
         parent::__construct(null, OLE::ascToUcs('Root Entry'), OLE::OLE_PPS_TYPE_ROOT, null, null, null, $time_1st, $time_2nd, null, $raChild);
     }
@@ -101,7 +101,7 @@ class Root extends PPS
             $this->fileHandle = $filename;
         } elseif ($filename == '-' || $filename == '') {
             if ($this->tempDirectory === null) {
-                $this->tempDirectory = \PhpOffice\PhpSpreadsheet\Shared\File::sysGetTempDir();
+                $this->tempDirectory = \Wya\PhpSpreadsheet\Shared\File::sysGetTempDir();
             }
             $this->tempFilename = tempnam($this->tempDirectory, 'OLE_PPS_Root');
             $this->fileHandle = fopen($this->tempFilename, 'w+b');
@@ -274,7 +274,7 @@ class Root extends PPS
     }
 
     /**
-     * Saving big data (PPS's with data bigger than \PhpOffice\PhpSpreadsheet\Shared\OLE::OLE_DATA_SIZE_SMALL).
+     * Saving big data (PPS's with data bigger than \Wya\PhpSpreadsheet\Shared\OLE::OLE_DATA_SIZE_SMALL).
      *
      * @param int $iStBlk
      * @param array &$raList Reference to array of PPS's
@@ -305,7 +305,7 @@ class Root extends PPS
     }
 
     /**
-     * get small data (PPS's with data smaller than \PhpOffice\PhpSpreadsheet\Shared\OLE::OLE_DATA_SIZE_SMALL).
+     * get small data (PPS's with data smaller than \Wya\PhpSpreadsheet\Shared\OLE::OLE_DATA_SIZE_SMALL).
      *
      * @param array &$raList Reference to array of PPS's
      *

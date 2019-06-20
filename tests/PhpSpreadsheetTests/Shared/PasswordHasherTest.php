@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Shared;
+namespace Wya\PhpSpreadsheetTests\Shared;
 
-use PhpOffice\PhpSpreadsheet\Shared\PasswordHasher;
+use Wya\PhpSpreadsheet\Shared\PasswordHasher;
 use PHPUnit\Framework\TestCase;
 
 class PasswordHasherTest extends TestCase

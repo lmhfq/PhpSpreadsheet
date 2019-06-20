@@ -1,28 +1,28 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer;
+namespace Wya\PhpSpreadsheet\Writer;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\HashTable;
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\Drawing as WorksheetDrawing;
-use PhpOffice\PhpSpreadsheet\Worksheet\MemoryDrawing;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Chart;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Comments;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\ContentTypes;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\DocProps;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Drawing;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Rels;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\RelsRibbon;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\RelsVBA;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\StringTable;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Style;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Theme;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Workbook;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx\Worksheet;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\HashTable;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\Drawing as WorksheetDrawing;
+use Wya\PhpSpreadsheet\Worksheet\MemoryDrawing;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Chart;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Comments;
+use Wya\PhpSpreadsheet\Writer\Xlsx\ContentTypes;
+use Wya\PhpSpreadsheet\Writer\Xlsx\DocProps;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Drawing;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Rels;
+use Wya\PhpSpreadsheet\Writer\Xlsx\RelsRibbon;
+use Wya\PhpSpreadsheet\Writer\Xlsx\RelsVBA;
+use Wya\PhpSpreadsheet\Writer\Xlsx\StringTable;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Style;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Theme;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Workbook;
+use Wya\PhpSpreadsheet\Writer\Xlsx\Worksheet;
 use ZipArchive;
 
 class Xlsx extends BaseWriter
@@ -77,7 +77,7 @@ class Xlsx extends BaseWriter
     private $fillHashTable;
 
     /**
-     * Private unique \PhpOffice\PhpSpreadsheet\Style\Font HashTable.
+     * Private unique \Wya\PhpSpreadsheet\Style\Font HashTable.
      *
      * @var HashTable
      */
@@ -98,7 +98,7 @@ class Xlsx extends BaseWriter
     private $numFmtHashTable;
 
     /**
-     * Private unique \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet\BaseDrawing HashTable.
+     * Private unique \Wya\PhpSpreadsheet\Worksheet\Worksheet\BaseDrawing HashTable.
      *
      * @var HashTable
      */
@@ -152,7 +152,7 @@ class Xlsx extends BaseWriter
      *
      * @param string $pPartName Writer part name
      *
-     * @return \PhpOffice\PhpSpreadsheet\Writer\Xlsx\WriterPart
+     * @return \Wya\PhpSpreadsheet\Writer\Xlsx\WriterPart
      */
     public function getWriterPart($pPartName)
     {
@@ -493,7 +493,7 @@ class Xlsx extends BaseWriter
     }
 
     /**
-     * Get \PhpOffice\PhpSpreadsheet\Style\Font HashTable.
+     * Get \Wya\PhpSpreadsheet\Style\Font HashTable.
      *
      * @return HashTable
      */
@@ -523,7 +523,7 @@ class Xlsx extends BaseWriter
     }
 
     /**
-     * Get \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet\BaseDrawing HashTable.
+     * Get \Wya\PhpSpreadsheet\Worksheet\Worksheet\BaseDrawing HashTable.
      *
      * @return HashTable
      */

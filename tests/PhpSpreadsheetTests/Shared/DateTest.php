@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Shared;
+namespace Wya\PhpSpreadsheetTests\Shared;
 
-use PhpOffice\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Shared\Date;
 use PHPUnit\Framework\TestCase;
 
 class DateTest extends TestCase

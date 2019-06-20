@@ -1,23 +1,23 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+namespace Wya\PhpSpreadsheet\Writer\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Comment;
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Comment;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
 
 class Comments extends WriterPart
 {
     /**
      * Write comments to XML format.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      *
      * @return string XML Output
      */
-    public function writeComments(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet)
+    public function writeComments(\Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet)
     {
         // Create XML writer
         $objWriter = null;
@@ -74,7 +74,7 @@ class Comments extends WriterPart
      * @param Comment $pComment Comment
      * @param array $pAuthors Array of authors
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      */
     private function writeComment(XMLWriter $objWriter, $pCellReference, Comment $pComment, array $pAuthors)
     {
@@ -94,13 +94,13 @@ class Comments extends WriterPart
     /**
      * Write VML comments to XML format.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      *
      * @return string XML Output
      */
-    public function writeVMLComments(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet)
+    public function writeVMLComments(\Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet)
     {
         // Create XML writer
         $objWriter = null;

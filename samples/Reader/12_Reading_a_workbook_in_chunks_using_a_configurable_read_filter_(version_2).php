@@ -2,8 +2,8 @@
 
 namespace Samples\Sample12;
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Reader\IReadFilter;
 
 require __DIR__ . '/../Header.php';
 

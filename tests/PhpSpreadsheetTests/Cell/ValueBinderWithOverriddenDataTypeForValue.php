@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Cell;
+namespace Wya\PhpSpreadsheetTests\Cell;
 
-use PhpOffice\PhpSpreadsheet\Cell\DefaultValueBinder;
+use Wya\PhpSpreadsheet\Cell\DefaultValueBinder;
 
 class ValueBinderWithOverriddenDataTypeForValue extends DefaultValueBinder
 {

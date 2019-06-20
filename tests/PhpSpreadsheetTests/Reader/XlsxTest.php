@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Document\Properties;
-use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
-use PhpOffice\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Document\Properties;
+use Wya\PhpSpreadsheet\Reader\Xlsx;
+use Wya\PhpSpreadsheet\Shared\File;
 use PHPUnit\Framework\TestCase;
 
 class XlsxTest extends TestCase
@@ -21,7 +21,7 @@ class XlsxTest extends TestCase
         $this->assertEquals('Unit Testing', $properties->getTitle());
         $this->assertEquals('Property Test', $properties->getSubject());
         // Extended Properties
-        $this->assertEquals('PHPOffice', $properties->getCompany());
+        $this->assertEquals('Wya', $properties->getCompany());
         $this->assertEquals('The Big Boss', $properties->getManager());
         // Custom Properties
         $customProperties = $properties->getCustomProperties();
@@ -30,7 +30,7 @@ class XlsxTest extends TestCase
         $this->assertArrayHasKey('Publisher', $customProperties);
         $this->assertTrue($properties->isCustomPropertySet('Publisher'));
         $this->assertEquals(Properties::PROPERTY_TYPE_STRING, $properties->getCustomPropertyType('Publisher'));
-        $this->assertEquals('PHPOffice Suite', $properties->getCustomPropertyValue('Publisher'));
+        $this->assertEquals('Wya Suite', $properties->getCustomPropertyValue('Publisher'));
     }
 
     /**
@@ -82,7 +82,7 @@ class XlsxTest extends TestCase
         $reader = new Xlsx();
         $excel = $reader->load($filename);
         $resultFilename = tempnam(File::sysGetTempDir(), 'phpspreadsheet-test');
-        $writer = new \PhpOffice\PhpSpreadsheet\Writer\Xlsx($excel);
+        $writer = new \Wya\PhpSpreadsheet\Writer\Xlsx($excel);
         $writer->save($resultFilename);
         $excel = $reader->load($resultFilename);
         // Fake assert. The only thing we need is to ensure the file is loaded without exception

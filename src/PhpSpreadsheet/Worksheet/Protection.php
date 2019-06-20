@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet;
+namespace Wya\PhpSpreadsheet\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Shared\PasswordHasher;
+use Wya\PhpSpreadsheet\Shared\PasswordHasher;
 
 class Protection
 {

@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\IOFactory;
 
 require __DIR__ . '/../Header.php';
 $spreadsheet = require __DIR__ . '/../templates/sampleSpreadsheet.php';

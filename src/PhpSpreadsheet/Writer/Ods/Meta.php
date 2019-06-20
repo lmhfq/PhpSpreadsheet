@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Ods;
+namespace Wya\PhpSpreadsheet\Writer\Ods;
 
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class Meta extends WriterPart
 {
@@ -12,7 +12,7 @@ class Meta extends WriterPart
      *
      * @param Spreadsheet $spreadsheet
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      *
      * @return string XML Output
      */

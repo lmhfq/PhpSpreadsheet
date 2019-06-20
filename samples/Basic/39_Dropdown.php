@@ -2,7 +2,7 @@
 
 use Wya\PhpSpreadsheet\Cell\DataValidation;
 use Wya\PhpSpreadsheet\NamedRange;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../Header.php';
 
@@ -13,8 +13,8 @@ $spreadsheet = new Spreadsheet();
 // Set document properties
 $helper->log('Set document properties');
 $spreadsheet->getProperties()
-    ->setCreator('PHPOffice')
-    ->setLastModifiedBy('PHPOffice')
+    ->setCreator('Wya')
+    ->setLastModifiedBy('Wya')
     ->setTitle('PhpSpreadsheet Test Document')
     ->setSubject('PhpSpreadsheet Test Document')
     ->setDescription('Test document for PhpSpreadsheet, generated using PHP classes.')

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\Escher;
+namespace Wya\PhpSpreadsheet\Shared\Escher;
 
 class DgContainer
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Shared;
+namespace Wya\PhpSpreadsheetTests\Shared;
 
-use PhpOffice\PhpSpreadsheet\Shared\OLERead;
+use Wya\PhpSpreadsheet\Shared\OLERead;
 use PHPUnit\Framework\TestCase;
 
 class OLEReadTest extends TestCase

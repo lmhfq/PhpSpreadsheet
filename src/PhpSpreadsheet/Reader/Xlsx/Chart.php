@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+namespace Wya\PhpSpreadsheet\Reader\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\Chart\DataSeries;
-use PhpOffice\PhpSpreadsheet\Chart\DataSeriesValues;
-use PhpOffice\PhpSpreadsheet\Chart\Layout;
-use PhpOffice\PhpSpreadsheet\Chart\Legend;
-use PhpOffice\PhpSpreadsheet\Chart\PlotArea;
-use PhpOffice\PhpSpreadsheet\Chart\Title;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\Style\Color;
-use PhpOffice\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\Chart\DataSeries;
+use Wya\PhpSpreadsheet\Chart\DataSeriesValues;
+use Wya\PhpSpreadsheet\Chart\Layout;
+use Wya\PhpSpreadsheet\Chart\Legend;
+use Wya\PhpSpreadsheet\Chart\PlotArea;
+use Wya\PhpSpreadsheet\Chart\Title;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Style\Color;
+use Wya\PhpSpreadsheet\Style\Font;
 use SimpleXMLElement;
 
 class Chart
@@ -54,7 +54,7 @@ class Chart
      * @param SimpleXMLElement $chartElements
      * @param string $chartName
      *
-     * @return \PhpOffice\PhpSpreadsheet\Chart\Chart
+     * @return \Wya\PhpSpreadsheet\Chart\Chart
      */
     public static function readChart(SimpleXMLElement $chartElements, $chartName)
     {
@@ -214,7 +214,7 @@ class Chart
                     }
             }
         }
-        $chart = new \PhpOffice\PhpSpreadsheet\Chart\Chart($chartName, $title, $legend, $plotArea, $plotVisOnly, $dispBlanksAs, $XaxisLabel, $YaxisLabel);
+        $chart = new \Wya\PhpSpreadsheet\Chart\Chart($chartName, $title, $legend, $plotArea, $plotVisOnly, $dispBlanksAs, $XaxisLabel, $YaxisLabel);
 
         return $chart;
     }

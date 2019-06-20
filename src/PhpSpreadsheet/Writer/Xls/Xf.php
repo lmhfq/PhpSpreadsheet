@@ -1,13 +1,13 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
+namespace Wya\PhpSpreadsheet\Writer\Xls;
 
-use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Borders;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Protection;
-use PhpOffice\PhpSpreadsheet\Style\Style;
+use Wya\PhpSpreadsheet\Style\Alignment;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Borders;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Protection;
+use Wya\PhpSpreadsheet\Style\Style;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Format (used as the base for this class):
 // -----------------------------------------------------------------------------------------

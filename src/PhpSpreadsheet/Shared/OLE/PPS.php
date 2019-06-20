@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\OLE;
+namespace Wya\PhpSpreadsheet\Shared\OLE;
 
 // vim: set expandtab tabstop=4 shiftwidth=4:
 // +----------------------------------------------------------------------+
@@ -20,7 +20,7 @@ namespace PhpOffice\PhpSpreadsheet\Shared\OLE;
 // | Based on OLE::Storage_Lite by Kawai, Takanori                        |
 // +----------------------------------------------------------------------+
 //
-use PhpOffice\PhpSpreadsheet\Shared\OLE;
+use Wya\PhpSpreadsheet\Shared\OLE;
 
 /**
  * Class for creating PPS's for OLE containers.

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
-use PhpOffice\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Shared\File;
 
 /**
  * Factory to create readers and writers easily.

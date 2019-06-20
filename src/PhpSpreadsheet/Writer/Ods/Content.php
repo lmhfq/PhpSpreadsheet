@@ -1,26 +1,26 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Ods;
+namespace Wya\PhpSpreadsheet\Writer\Ods;
 
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Font;
-use PhpOffice\PhpSpreadsheet\Worksheet\Row;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
-use PhpOffice\PhpSpreadsheet\Writer\Exception;
-use PhpOffice\PhpSpreadsheet\Writer\Ods;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Cell\Comment;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Worksheet\Row;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Writer\Exception;
+use Wya\PhpSpreadsheet\Writer\Ods;
+use Wya\PhpSpreadsheet\Writer\Ods\Cell\Comment;
 
 /**
  * @category   PhpSpreadsheet
  *
  * @method Ods getParentWriter
  *
- * @copyright  Copyright (c) 2006 - 2015 PhpSpreadsheet (https://github.com/PHPOffice/PhpSpreadsheet)
+ * @copyright  Copyright (c) 2006 - 2015 PhpSpreadsheet (https://github.com/Wya/PhpSpreadsheet)
  * @author     Alexander Pervakov <frost-nzcr4@jagmort.com>
  */
 class Content extends WriterPart
@@ -32,7 +32,7 @@ class Content extends WriterPart
     /**
      * Write content.xml to XML format.
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      *
      * @return string XML Output
      */
@@ -178,7 +178,7 @@ class Content extends WriterPart
         $prevColumn = -1;
         $cells = $row->getCellIterator();
         while ($cells->valid()) {
-            /** @var \PhpOffice\PhpSpreadsheet\Cell\Cell $cell */
+            /** @var \Wya\PhpSpreadsheet\Cell\Cell $cell */
             $cell = $cells->current();
             $column = Coordinate::columnIndexFromString($cell->getColumn()) - 1;
 
@@ -374,7 +374,7 @@ class Content extends WriterPart
      * @param XMLWriter $objWriter
      * @param Cell $cell
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Exception
+     * @throws \Wya\PhpSpreadsheet\Exception
      */
     private function writeCellMerge(XMLWriter $objWriter, Cell $cell)
     {

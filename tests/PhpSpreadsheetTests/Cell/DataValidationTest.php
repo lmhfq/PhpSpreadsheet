@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Cell;
+namespace Wya\PhpSpreadsheetTests\Cell;
 
-use PhpOffice\PhpSpreadsheet\Cell\DataValidation;
+use Wya\PhpSpreadsheet\Cell\DataValidation;
 use PHPUnit\Framework\TestCase;
 
 class DataValidationTest extends TestCase

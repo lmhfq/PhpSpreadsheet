@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+namespace Wya\PhpSpreadsheet\Writer\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\MemoryDrawing;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\MemoryDrawing;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 class Rels extends WriterPart
 {
@@ -168,7 +168,7 @@ class Rels extends WriterPart
      *     rId1                 - Drawings
      *  rId_hyperlink_x     - Hyperlinks
      *
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
      * @param int $pWorksheetId
      * @param bool $includeCharts Flag indicating if we should write charts
      *
@@ -176,7 +176,7 @@ class Rels extends WriterPart
      *
      * @return string XML Output
      */
-    public function writeWorksheetRelationships(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet, $pWorksheetId = 1, $includeCharts = false)
+    public function writeWorksheetRelationships(\Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet, $pWorksheetId = 1, $includeCharts = false)
     {
         // Create XML writer
         $objWriter = null;
@@ -277,7 +277,7 @@ class Rels extends WriterPart
         return $objWriter->getData();
     }
 
-    private function writeUnparsedRelationship(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet, XMLWriter $objWriter, $relationship, $type)
+    private function writeUnparsedRelationship(\Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet, XMLWriter $objWriter, $relationship, $type)
     {
         $unparsedLoadedData = $pWorksheet->getParent()->getUnparsedLoadedData();
         if (!isset($unparsedLoadedData['sheets'][$pWorksheet->getCodeName()][$relationship])) {
@@ -297,7 +297,7 @@ class Rels extends WriterPart
     /**
      * Write drawing relationships to XML format.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
      * @param int &$chartRef Chart ID
      * @param bool $includeCharts Flag indicating if we should write charts
      *
@@ -305,7 +305,7 @@ class Rels extends WriterPart
      *
      * @return string XML Output
      */
-    public function writeDrawingRelationships(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet, &$chartRef, $includeCharts = false)
+    public function writeDrawingRelationships(\Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet, &$chartRef, $includeCharts = false)
     {
         // Create XML writer
         $objWriter = null;
@@ -326,10 +326,10 @@ class Rels extends WriterPart
         $i = 1;
         $iterator = $pWorksheet->getDrawingCollection()->getIterator();
         while ($iterator->valid()) {
-            if ($iterator->current() instanceof \PhpOffice\PhpSpreadsheet\Worksheet\Drawing
+            if ($iterator->current() instanceof \Wya\PhpSpreadsheet\Worksheet\Drawing
                 || $iterator->current() instanceof MemoryDrawing) {
                 // Write relationship for image drawing
-                /** @var \PhpOffice\PhpSpreadsheet\Worksheet\Drawing $drawing */
+                /** @var \Wya\PhpSpreadsheet\Worksheet\Drawing $drawing */
                 $drawing = $iterator->current();
                 $this->writeRelationship(
                     $objWriter,
@@ -368,13 +368,13 @@ class Rels extends WriterPart
     /**
      * Write header/footer drawing relationships to XML format.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet
      *
      * @throws WriterException
      *
      * @return string XML Output
      */
-    public function writeHeaderFooterDrawingRelationships(\PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet)
+    public function writeHeaderFooterDrawingRelationships(\Wya\PhpSpreadsheet\Worksheet\Worksheet $pWorksheet)
     {
         // Create XML writer
         $objWriter = null;
@@ -439,7 +439,7 @@ class Rels extends WriterPart
 
     /**
      * @param $objWriter
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Drawing $drawing
+     * @param \Wya\PhpSpreadsheet\Worksheet\Drawing $drawing
      * @param $i
      *
      * @throws WriterException

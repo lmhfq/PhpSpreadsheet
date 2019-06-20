@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\IOFactory;
 
 require __DIR__ . '/../Header.php';
 
@@ -14,7 +14,7 @@ $helper->write($spreadsheet, __FILE__, ['Xlsx', 'Xls', 'Html']);
 
 // Export to PDF (.pdf)
 $helper->log('Write to PDF format');
-IOFactory::registerWriter('Pdf', \PhpOffice\PhpSpreadsheet\Writer\Pdf\Dompdf::class);
+IOFactory::registerWriter('Pdf', \Wya\PhpSpreadsheet\Writer\Pdf\Dompdf::class);
 $helper->write($spreadsheet, __FILE__, ['Pdf']);
 
 // Remove first two rows with field headers before exporting to CSV

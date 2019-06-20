@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Reader\Csv;
+use Wya\PhpSpreadsheet\Reader\Csv;
 use PHPUnit\Framework\TestCase;
 
 class CsvTest extends TestCase

@@ -1,10 +1,10 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Color;
-use PhpOffice\PhpSpreadsheet\Style\Conditional;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
-use PhpOffice\PhpSpreadsheet\Worksheet\PageSetup;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Color;
+use Wya\PhpSpreadsheet\Style\Conditional;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Worksheet\PageSetup;
 
 require __DIR__ . '/../Header.php';
 

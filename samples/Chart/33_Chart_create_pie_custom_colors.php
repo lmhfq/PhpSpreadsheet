@@ -1,14 +1,14 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Chart\Chart;
-use PhpOffice\PhpSpreadsheet\Chart\DataSeries;
-use PhpOffice\PhpSpreadsheet\Chart\DataSeriesValues;
-use PhpOffice\PhpSpreadsheet\Chart\Layout;
-use PhpOffice\PhpSpreadsheet\Chart\Legend;
-use PhpOffice\PhpSpreadsheet\Chart\PlotArea;
-use PhpOffice\PhpSpreadsheet\Chart\Title;
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Chart\Chart;
+use Wya\PhpSpreadsheet\Chart\DataSeries;
+use Wya\PhpSpreadsheet\Chart\DataSeriesValues;
+use Wya\PhpSpreadsheet\Chart\Layout;
+use Wya\PhpSpreadsheet\Chart\Legend;
+use Wya\PhpSpreadsheet\Chart\PlotArea;
+use Wya\PhpSpreadsheet\Chart\Title;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../Header.php';
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Shared;
+namespace Wya\PhpSpreadsheetTests\Shared;
 
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
 use PHPUnit\Framework\TestCase;
 
 class StringHelperTest extends TestCase

@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\JAMA;
+namespace Wya\PhpSpreadsheet\Shared\JAMA;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Exception as CalculationException;
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Calculation\Exception as CalculationException;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
 
 /**
  * Matrix class.

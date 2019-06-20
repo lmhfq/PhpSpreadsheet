@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Reader\Xml;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Reader\Xml;
 use PHPUnit\Framework\TestCase;
 
 class XmlTest extends TestCase
@@ -15,7 +15,7 @@ class XmlTest extends TestCase
      */
     public function testInvalidSimpleXML($filename)
     {
-        $this->expectException(\PhpOffice\PhpSpreadsheet\Reader\Exception::class);
+        $this->expectException(\Wya\PhpSpreadsheet\Reader\Exception::class);
 
         $xmlReader = new Xml();
         $xmlReader->trySimpleXMLLoadString($filename);

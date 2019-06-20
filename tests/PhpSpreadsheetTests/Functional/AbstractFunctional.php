@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Functional;
+namespace Wya\PhpSpreadsheetTests\Functional;
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Spreadsheet;
 use PHPUnit\Framework\TestCase;
 
 /**

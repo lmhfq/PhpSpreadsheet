@@ -1,24 +1,24 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xls;
+namespace Wya\PhpSpreadsheet\Writer\Xls;
 
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Cell\DataValidation;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\RichText\Run;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Shared\Xls;
-use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Color;
-use PhpOffice\PhpSpreadsheet\Style\Conditional;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Protection;
-use PhpOffice\PhpSpreadsheet\Worksheet\PageSetup;
-use PhpOffice\PhpSpreadsheet\Worksheet\SheetView;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Cell\DataValidation;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\RichText\Run;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Shared\Xls;
+use Wya\PhpSpreadsheet\Style\Alignment;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Color;
+use Wya\PhpSpreadsheet\Style\Conditional;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Protection;
+use Wya\PhpSpreadsheet\Worksheet\PageSetup;
+use Wya\PhpSpreadsheet\Worksheet\SheetView;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 // Original file header of PEAR::Spreadsheet_Excel_Writer_Worksheet (used as the base for this class):
 // -----------------------------------------------------------------------------------------
@@ -59,7 +59,7 @@ class Worksheet extends BIFFwriter
     /**
      * Formula parser.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Writer\Xls\Parser
+     * @var \Wya\PhpSpreadsheet\Writer\Xls\Parser
      */
     private $parser;
 
@@ -176,7 +176,7 @@ class Worksheet extends BIFFwriter
     /**
      * Sheet object.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+     * @var \Wya\PhpSpreadsheet\Worksheet\Worksheet
      */
     public $phpSheet;
 
@@ -190,7 +190,7 @@ class Worksheet extends BIFFwriter
     /**
      * Escher object corresponding to MSODRAWING.
      *
-     * @var \PhpOffice\PhpSpreadsheet\Shared\Escher
+     * @var \Wya\PhpSpreadsheet\Shared\Escher
      */
     private $escher;
 
@@ -220,9 +220,9 @@ class Worksheet extends BIFFwriter
      * @param array &$colors Colour Table
      * @param Parser $parser The formula parser created for the Workbook
      * @param bool $preCalculateFormulas Flag indicating whether formulas should be calculated or just written
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $phpSheet The worksheet to write
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $phpSheet The worksheet to write
      */
-    public function __construct(&$str_total, &$str_unique, &$str_table, &$colors, Parser $parser, $preCalculateFormulas, \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $phpSheet)
+    public function __construct(&$str_total, &$str_unique, &$str_table, &$colors, Parser $parser, $preCalculateFormulas, \Wya\PhpSpreadsheet\Worksheet\Worksheet $phpSheet)
     {
         // It needs to call its parent's constructor explicitly
         parent::__construct();
@@ -275,7 +275,7 @@ class Worksheet extends BIFFwriter
      * Add data to the beginning of the workbook (note the reverse order)
      * and to the end of the workbook.
      *
-     * @see \PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook::storeWorkbook()
+     * @see \Wya\PhpSpreadsheet\Writer\Xls\Workbook::storeWorkbook()
      */
     public function close()
     {
@@ -298,7 +298,7 @@ class Worksheet extends BIFFwriter
 
         // Column dimensions
         if (($defaultWidth = $phpSheet->getDefaultColumnDimension()->getWidth()) < 0) {
-            $defaultWidth = \PhpOffice\PhpSpreadsheet\Shared\Font::getDefaultColumnWidthByFont($phpSheet->getParent()->getDefaultStyle()->getFont());
+            $defaultWidth = \Wya\PhpSpreadsheet\Shared\Font::getDefaultColumnWidthByFont($phpSheet->getParent()->getDefaultStyle()->getFont());
         }
 
         $columnDimensions = $phpSheet->getColumnDimensions();
@@ -2043,17 +2043,17 @@ class Worksheet extends BIFFwriter
 
             // Decide what to do by the type of break
             switch ($breakType) {
-                case \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::BREAK_COLUMN:
+                case \Wya\PhpSpreadsheet\Worksheet\Worksheet::BREAK_COLUMN:
                     // Add to list of vertical breaks
                     $vbreaks[] = Coordinate::columnIndexFromString($coordinates[0]) - 1;
 
                     break;
-                case \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::BREAK_ROW:
+                case \Wya\PhpSpreadsheet\Worksheet\Worksheet::BREAK_ROW:
                     // Add to list of horizontal breaks
                     $hbreaks[] = $coordinates[1];
 
                     break;
-                case \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::BREAK_NONE:
+                case \Wya\PhpSpreadsheet\Worksheet\Worksheet::BREAK_NONE:
                 default:
                     // Nothing to do
                     break;
@@ -2554,7 +2554,7 @@ class Worksheet extends BIFFwriter
     /**
      * Get Escher object.
      *
-     * @return \PhpOffice\PhpSpreadsheet\Shared\Escher
+     * @return \Wya\PhpSpreadsheet\Shared\Escher
      */
     public function getEscher()
     {
@@ -2564,9 +2564,9 @@ class Worksheet extends BIFFwriter
     /**
      * Set Escher object.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Shared\Escher $pValue
+     * @param \Wya\PhpSpreadsheet\Shared\Escher $pValue
      */
-    public function setEscher(\PhpOffice\PhpSpreadsheet\Shared\Escher $pValue = null)
+    public function setEscher(\Wya\PhpSpreadsheet\Shared\Escher $pValue = null)
     {
         $this->escher = $pValue;
     }
@@ -3138,27 +3138,27 @@ class Worksheet extends BIFFwriter
             }
             // Underline type
             switch ($conditional->getStyle()->getFont()->getUnderline()) {
-                case \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_NONE:
+                case \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_NONE:
                     $dataBlockFont .= pack('C', 0x00);
                     $fontUnderline = 0;
 
                     break;
-                case \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLE:
+                case \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLE:
                     $dataBlockFont .= pack('C', 0x02);
                     $fontUnderline = 0;
 
                     break;
-                case \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLEACCOUNTING:
+                case \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_DOUBLEACCOUNTING:
                     $dataBlockFont .= pack('C', 0x22);
                     $fontUnderline = 0;
 
                     break;
-                case \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLE:
+                case \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLE:
                     $dataBlockFont .= pack('C', 0x01);
                     $fontUnderline = 0;
 
                     break;
-                case \PhpOffice\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLEACCOUNTING:
+                case \Wya\PhpSpreadsheet\Style\Font::UNDERLINE_SINGLEACCOUNTING:
                     $dataBlockFont .= pack('C', 0x21);
                     $fontUnderline = 0;
 

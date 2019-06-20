@@ -1,5 +1,5 @@
 site_name: PhpSpreadsheet Documentation
-repo_url: https://github.com/PHPOffice/phpspreadsheet
+repo_url: https://github.com/Wya/phpspreadsheet
 edit_uri: edit/master/docs/
 
 theme: readthedocs

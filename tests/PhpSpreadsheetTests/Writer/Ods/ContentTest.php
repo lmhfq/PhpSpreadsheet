@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Writer\Ods\Content;
+namespace Wya\PhpSpreadsheetTests\Writer\Ods\Content;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Shared\Date;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Color;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Font;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
-use PhpOffice\PhpSpreadsheet\Writer\Ods;
-use PhpOffice\PhpSpreadsheet\Writer\Ods\Content;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Shared\Date;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Color;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Writer\Ods;
+use Wya\PhpSpreadsheet\Writer\Ods\Content;
 use PHPUnit\Framework\TestCase;
 
 class ContentTest extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Reader\Xlsx;
+namespace Wya\PhpSpreadsheet\Reader\Xlsx;
 
 class Theme
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared\JAMA;
+namespace Wya\PhpSpreadsheet\Shared\JAMA;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Exception as CalculationException;
+use Wya\PhpSpreadsheet\Calculation\Exception as CalculationException;
 
 /**
  *    Cholesky decomposition class.

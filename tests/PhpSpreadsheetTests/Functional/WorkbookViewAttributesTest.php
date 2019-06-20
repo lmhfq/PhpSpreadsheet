@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Functional;
+namespace Wya\PhpSpreadsheetTests\Functional;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 class WorkbookViewAttributesTest extends AbstractFunctional
 {
@@ -18,7 +18,7 @@ class WorkbookViewAttributesTest extends AbstractFunctional
      * (the attribute controlling worksheet tabs visibility,)
      * are preserved when xlsx documents are read and written.
      *
-     * @see https://github.com/PHPOffice/PhpSpreadsheet/issues/523
+     * @see https://github.com/Wya/PhpSpreadsheet/issues/523
      *
      * @dataProvider providerFormats
      *

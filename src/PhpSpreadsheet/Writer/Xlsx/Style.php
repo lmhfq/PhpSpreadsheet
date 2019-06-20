@@ -1,17 +1,17 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+namespace Wya\PhpSpreadsheet\Writer\Xlsx;
 
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Borders;
-use PhpOffice\PhpSpreadsheet\Style\Conditional;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Font;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
-use PhpOffice\PhpSpreadsheet\Style\Protection;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Borders;
+use Wya\PhpSpreadsheet\Style\Conditional;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Style\Protection;
 
 class Style extends WriterPart
 {
@@ -20,7 +20,7 @@ class Style extends WriterPart
      *
      * @param Spreadsheet $spreadsheet
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      *
      * @return string XML Output
      */
@@ -367,12 +367,12 @@ class Style extends WriterPart
      * Write Cell Style Xf.
      *
      * @param XMLWriter $objWriter XML Writer
-     * @param \PhpOffice\PhpSpreadsheet\Style\Style $pStyle Style
+     * @param \Wya\PhpSpreadsheet\Style\Style $pStyle Style
      * @param Spreadsheet $spreadsheet Workbook
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      */
-    private function writeCellStyleXf(XMLWriter $objWriter, \PhpOffice\PhpSpreadsheet\Style\Style $pStyle, Spreadsheet $spreadsheet)
+    private function writeCellStyleXf(XMLWriter $objWriter, \Wya\PhpSpreadsheet\Style\Style $pStyle, Spreadsheet $spreadsheet)
     {
         // xf
         $objWriter->startElement('xf');
@@ -444,9 +444,9 @@ class Style extends WriterPart
      * Write Cell Style Dxf.
      *
      * @param XMLWriter $objWriter XML Writer
-     * @param \PhpOffice\PhpSpreadsheet\Style\Style $pStyle Style
+     * @param \Wya\PhpSpreadsheet\Style\Style $pStyle Style
      */
-    private function writeCellStyleDxf(XMLWriter $objWriter, \PhpOffice\PhpSpreadsheet\Style\Style $pStyle)
+    private function writeCellStyleDxf(XMLWriter $objWriter, \Wya\PhpSpreadsheet\Style\Style $pStyle)
     {
         // dxf
         $objWriter->startElement('dxf');
@@ -552,7 +552,7 @@ class Style extends WriterPart
      *
      * @param Spreadsheet $spreadsheet
      *
-     * @return \PhpOffice\PhpSpreadsheet\Style\Style[] All styles in PhpSpreadsheet
+     * @return \Wya\PhpSpreadsheet\Style\Style[] All styles in PhpSpreadsheet
      */
     public function allStyles(Spreadsheet $spreadsheet)
     {
@@ -605,7 +605,7 @@ class Style extends WriterPart
         $aFills[] = $fill1;
         // The remaining fills
         $aStyles = $this->allStyles($spreadsheet);
-        /** @var \PhpOffice\PhpSpreadsheet\Style\Style $style */
+        /** @var \Wya\PhpSpreadsheet\Style\Style $style */
         foreach ($aStyles as $style) {
             if (!isset($aFills[$style->getFill()->getHashCode()])) {
                 $aFills[$style->getFill()->getHashCode()] = $style->getFill();
@@ -628,7 +628,7 @@ class Style extends WriterPart
         $aFonts = [];
         $aStyles = $this->allStyles($spreadsheet);
 
-        /** @var \PhpOffice\PhpSpreadsheet\Style\Style $style */
+        /** @var \Wya\PhpSpreadsheet\Style\Style $style */
         foreach ($aStyles as $style) {
             if (!isset($aFonts[$style->getFont()->getHashCode()])) {
                 $aFonts[$style->getFont()->getHashCode()] = $style->getFont();
@@ -651,7 +651,7 @@ class Style extends WriterPart
         $aBorders = [];
         $aStyles = $this->allStyles($spreadsheet);
 
-        /** @var \PhpOffice\PhpSpreadsheet\Style\Style $style */
+        /** @var \Wya\PhpSpreadsheet\Style\Style $style */
         foreach ($aStyles as $style) {
             if (!isset($aBorders[$style->getBorders()->getHashCode()])) {
                 $aBorders[$style->getBorders()->getHashCode()] = $style->getBorders();
@@ -674,7 +674,7 @@ class Style extends WriterPart
         $aNumFmts = [];
         $aStyles = $this->allStyles($spreadsheet);
 
-        /** @var \PhpOffice\PhpSpreadsheet\Style\Style $style */
+        /** @var \Wya\PhpSpreadsheet\Style\Style $style */
         foreach ($aStyles as $style) {
             if ($style->getNumberFormat()->getBuiltInFormatCode() === false && !isset($aNumFmts[$style->getNumberFormat()->getHashCode()])) {
                 $aNumFmts[$style->getNumberFormat()->getHashCode()] = $style->getNumberFormat();

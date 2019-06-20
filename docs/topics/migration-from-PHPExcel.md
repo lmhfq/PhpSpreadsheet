@@ -14,7 +14,7 @@ installed with composer, it can be run like so:
 
 ``` sh
 cd /project/to/migrate/src
-/project/to/migrate/vendor/phpoffice/phpspreadsheet/bin/migrate-from-phpexcel
+/project/to/migrate/vendor/Wya/phpspreadsheet/bin/migrate-from-phpexcel
 ```
 
 **Important** The tool will irreversibly modify your sources, be sure to
@@ -63,7 +63,7 @@ Before:
 After:
 
 ```php
-\PhpOffice\PhpSpreadsheet\IOFactory::registerReader($type, $classname);
+\Wya\PhpSpreadsheet\IOFactory::registerReader($type, $classname);
 ```
 
 ### Removed deprecated things
@@ -189,14 +189,14 @@ $writer = \PHPExcel_IOFactory::createWriter($spreadsheet, 'PDF');
 After:
 
 ```php
-$writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Mpdf');
+$writer = \Wya\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Mpdf');
 
 // Or alternatively
-\PhpOffice\PhpSpreadsheet\IOFactory::registerWriter('Pdf', \PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf::class);
-$writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Pdf');
+\Wya\PhpSpreadsheet\IOFactory::registerWriter('Pdf', \Wya\PhpSpreadsheet\Writer\Pdf\Mpdf::class);
+$writer = \Wya\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Pdf');
 
 // Or alternatively
-$writer = new \PhpOffice\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
+$writer = new \Wya\PhpSpreadsheet\Writer\Pdf\Mpdf($spreadsheet);
 ```
 
 ### Rendering charts
@@ -230,7 +230,7 @@ composer require jpgraph/jpgraph
 And then:
 
 ```php
-Settings::setChartRenderer(\PhpOffice\PhpSpreadsheet\Chart\Renderer\JpGraph::class);
+Settings::setChartRenderer(\Wya\PhpSpreadsheet\Chart\Renderer\JpGraph::class);
 ```
 
 ### PclZip and ZipArchive
@@ -264,10 +264,10 @@ related to that feature were removed:
 - `PHPExcel_CachedObjectStorage_SQLite3`
 - `PHPExcel_CachedObjectStorage_Wincache`
 
-In addition to that, `\PhpOffice\PhpSpreadsheet::getCellCollection()` was renamed
-to `\PhpOffice\PhpSpreadsheet::getCoordinates()` and
-`\PhpOffice\PhpSpreadsheet::getCellCacheController()` to
-`\PhpOffice\PhpSpreadsheet::getCellCollection()` for clarity.
+In addition to that, `\Wya\PhpSpreadsheet::getCellCollection()` was renamed
+to `\Wya\PhpSpreadsheet::getCoordinates()` and
+`\Wya\PhpSpreadsheet::getCellCacheController()` to
+`\Wya\PhpSpreadsheet::getCellCollection()` for clarity.
 
 Refer to [the new documentation](./memory_saving.md) to see how to migrate.
 
@@ -366,7 +366,7 @@ $style = [
 ### Dedicated class to manipulate coordinates
 
 Methods to manipulate coordinates that used to exists in `PHPExcel_Cell` were extracted
-to a dedicated new class `\PhpOffice\PhpSpreadsheet\Cell\Coordinate`. The methods are:
+to a dedicated new class `\Wya\PhpSpreadsheet\Cell\Coordinate`. The methods are:
 
 - `absoluteCoordinate()`
 - `absoluteReference()`
@@ -430,4 +430,4 @@ All the following methods are affected:
 
 Default values for many methods were removed when it did not make sense. Typically,
 setter methods should not have default values. For a complete list of methods and
-their original default values, see [that commit](https://github.com/PHPOffice/PhpSpreadsheet/commit/033a4bdad56340795a5bf7ec3c8a2fde005cda24).
+their original default values, see [that commit](https://github.com/Wya/PhpSpreadsheet/commit/033a4bdad56340795a5bf7ec3c8a2fde005cda24).

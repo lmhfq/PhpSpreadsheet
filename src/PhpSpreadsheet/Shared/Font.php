@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Shared;
+namespace Wya\PhpSpreadsheet\Shared;
 
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\RichText\RichText;
 
 class Font
 {
@@ -216,14 +216,14 @@ class Font
     /**
      * Calculate an (approximate) OpenXML column width, based on font size and text contained.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font Font object
+     * @param \Wya\PhpSpreadsheet\Style\Font $font Font object
      * @param RichText|string $cellText Text to calculate width
      * @param int $rotation Rotation angle
-     * @param null|\PhpOffice\PhpSpreadsheet\Style\Font $defaultFont Font object
+     * @param null|\Wya\PhpSpreadsheet\Style\Font $defaultFont Font object
      *
      * @return int Column width
      */
-    public static function calculateColumnWidth(\PhpOffice\PhpSpreadsheet\Style\Font $font, $cellText = '', $rotation = 0, \PhpOffice\PhpSpreadsheet\Style\Font $defaultFont = null)
+    public static function calculateColumnWidth(\Wya\PhpSpreadsheet\Style\Font $font, $cellText = '', $rotation = 0, \Wya\PhpSpreadsheet\Style\Font $defaultFont = null)
     {
         // If it is rich text, use plain text
         if ($cellText instanceof RichText) {
@@ -273,14 +273,14 @@ class Font
      * Get GD text width in pixels for a string of text in a certain font at a certain rotation angle.
      *
      * @param string $text
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font
+     * @param \Wya\PhpSpreadsheet\Style\Font
      * @param int $rotation
      *
      * @throws PhpSpreadsheetException
      *
      * @return int
      */
-    public static function getTextWidthPixelsExact($text, \PhpOffice\PhpSpreadsheet\Style\Font $font, $rotation = 0)
+    public static function getTextWidthPixelsExact($text, \Wya\PhpSpreadsheet\Style\Font $font, $rotation = 0)
     {
         if (!function_exists('imagettfbbox')) {
             throw new PhpSpreadsheetException('GD library needs to be enabled');
@@ -307,12 +307,12 @@ class Font
      * Get approximate width in pixels for a string of text in a certain font at a certain rotation angle.
      *
      * @param string $columnText
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font
+     * @param \Wya\PhpSpreadsheet\Style\Font $font
      * @param int $rotation
      *
      * @return int Text width in pixels (no padding added)
      */
-    public static function getTextWidthPixelsApprox($columnText, \PhpOffice\PhpSpreadsheet\Style\Font $font, $rotation = 0)
+    public static function getTextWidthPixelsApprox($columnText, \Wya\PhpSpreadsheet\Style\Font $font, $rotation = 0)
     {
         $fontName = $font->getName();
         $fontSize = $font->getSize();
@@ -396,7 +396,7 @@ class Font
     /**
      * Returns the font path given the font.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font
+     * @param \Wya\PhpSpreadsheet\Style\Font $font
      *
      * @return string Path to TrueType font file
      */
@@ -551,12 +551,12 @@ class Font
      * Get the effective column width for columns without a column dimension or column with width -1
      * For example, for Calibri 11 this is 9.140625 (64 px).
      *
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font The workbooks default font
+     * @param \Wya\PhpSpreadsheet\Style\Font $font The workbooks default font
      * @param bool $pPixels true = return column width in pixels, false = return in OOXML units
      *
      * @return mixed Column width
      */
-    public static function getDefaultColumnWidthByFont(\PhpOffice\PhpSpreadsheet\Style\Font $font, $pPixels = false)
+    public static function getDefaultColumnWidthByFont(\Wya\PhpSpreadsheet\Style\Font $font, $pPixels = false)
     {
         if (isset(self::$defaultColumnWidths[$font->getName()][$font->getSize()])) {
             // Exact width can be determined
@@ -584,11 +584,11 @@ class Font
      * Get the effective row height for rows without a row dimension or rows with height -1
      * For example, for Calibri 11 this is 15 points.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Style\Font $font The workbooks default font
+     * @param \Wya\PhpSpreadsheet\Style\Font $font The workbooks default font
      *
      * @return float Row height in points
      */
-    public static function getDefaultRowHeightByFont(\PhpOffice\PhpSpreadsheet\Style\Font $font)
+    public static function getDefaultRowHeightByFont(\Wya\PhpSpreadsheet\Style\Font $font)
     {
         switch ($font->getName()) {
             case 'Arial':

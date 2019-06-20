@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Calculation;
+namespace Wya\PhpSpreadsheetTests\Calculation;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Engineering;
-use PhpOffice\PhpSpreadsheet\Calculation\Functions;
-use PhpOffice\PhpSpreadsheetTests\Custom\ComplexAssert;
+use Wya\PhpSpreadsheet\Calculation\Engineering;
+use Wya\PhpSpreadsheet\Calculation\Functions;
+use Wya\PhpSpreadsheetTests\Custom\ComplexAssert;
 use PHPUnit\Framework\TestCase;
 
 class EngineeringTest extends TestCase

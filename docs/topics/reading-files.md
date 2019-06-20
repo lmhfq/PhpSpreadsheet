@@ -20,13 +20,13 @@ Read more [about of XXE injection](https://websec.io/2012/08/27/Preventing-XXE-i
 
 The simplest way to load a workbook file is to let PhpSpreadsheet's IO
 Factory identify the file type and load it, calling the static `load()`
-method of the `\PhpOffice\PhpSpreadsheet\IOFactory` class.
+method of the `\Wya\PhpSpreadsheet\IOFactory` class.
 
 ``` php
 $inputFileName = './sampleData/example1.xls';
 
 /** Load $inputFileName to a Spreadsheet Object  **/
-$spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
+$spreadsheet = \Wya\PhpSpreadsheet\IOFactory::load($inputFileName);
 ```
 
 See `samples/Reader/01_Simple_file_reader_using_IOFactory.php` for a working
@@ -63,13 +63,13 @@ of .xls), although this type of exception should normally be trapped.
 $inputFileName = './sampleData/example1.xls';
 
 /** Create a new Xls Reader  **/
-$reader = new \PhpOffice\PhpSpreadsheet\Reader\Xls();
-//    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
-//    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xml();
-//    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Ods();
-//    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Slk();
-//    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Gnumeric();
-//    $reader = new \PhpOffice\PhpSpreadsheet\Reader\Csv();
+$reader = new \Wya\PhpSpreadsheet\Reader\Xls();
+//    $reader = new \Wya\PhpSpreadsheet\Reader\Xlsx();
+//    $reader = new \Wya\PhpSpreadsheet\Reader\Xml();
+//    $reader = new \Wya\PhpSpreadsheet\Reader\Ods();
+//    $reader = new \Wya\PhpSpreadsheet\Reader\Slk();
+//    $reader = new \Wya\PhpSpreadsheet\Reader\Gnumeric();
+//    $reader = new \Wya\PhpSpreadsheet\Reader\Csv();
 /** Load $inputFileName to a Spreadsheet Object  **/
 $spreadsheet = $reader->load($inputFileName);
 ```
@@ -92,7 +92,7 @@ $inputFileType = 'Xls';
 $inputFileName = './sampleData/example1.xls';
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Load $inputFileName to a Spreadsheet Object  **/
 $spreadsheet = $reader->load($inputFileName);
 ```
@@ -108,9 +108,9 @@ method to identify the reader that you need, before using the
 $inputFileName = './sampleData/example1.xls';
 
 /**  Identify the type of $inputFileName  **/
-$inputFileType = \PhpOffice\PhpSpreadsheet\IOFactory::identify($inputFileName);
+$inputFileType = \Wya\PhpSpreadsheet\IOFactory::identify($inputFileName);
 /**  Create a new Reader of the type that has been identified  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Load $inputFileName to a Spreadsheet Object  **/
 $spreadsheet = $reader->load($inputFileName);
 ```
@@ -136,7 +136,7 @@ $inputFileType = 'Xls';
 $inputFileName = './sampleData/example1.xls';
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Advise the Reader that we only want to load cell data  **/
 $reader->setReadDataOnly(true);
 /**  Load $inputFileName to a Spreadsheet Object  **/
@@ -182,7 +182,7 @@ $inputFileName = './sampleData/example1.xls';
 $sheetname = 'Data Sheet #2';
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Advise the Reader of which WorkSheets we want to load  **/
 $reader->setLoadSheetsOnly($sheetname);
 /**  Load $inputFileName to a Spreadsheet Object  **/
@@ -201,7 +201,7 @@ $inputFileName = './sampleData/example1.xls';
 $sheetnames = ['Data Sheet #1','Data Sheet #3'];
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Advise the Reader of which WorkSheets we want to load  **/
 $reader->setLoadSheetsOnly($sheetnames);
 /**  Load $inputFileName to a Spreadsheet Object  **/
@@ -219,7 +219,7 @@ $inputFileType = 'Xls';
 $inputFileName = './sampleData/example1.xls';
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Advise the Reader to load all Worksheets  **/
 $reader->setLoadAllSheets();
 /**  Load $inputFileName to a Spreadsheet Object  **/
@@ -242,7 +242,7 @@ CSV       | NO  | HTML   | NO
 If you are only interested in reading part of a worksheet, then you can
 write a filter class that identifies whether or not individual cells
 should be read by the loader. A read filter must implement the
-`\PhpOffice\PhpSpreadsheet\Reader\IReadFilter` interface, and contain a
+`\Wya\PhpSpreadsheet\Reader\IReadFilter` interface, and contain a
 `readCell()` method that accepts arguments of `$column`, `$row` and
 `$worksheetName`, and return a boolean true or false that indicates
 whether a workbook cell identified by those arguments should be read or
@@ -253,8 +253,8 @@ $inputFileType = 'Xls';
 $inputFileName = './sampleData/example1.xls';
 $sheetname = 'Data Sheet #3';
 
-/**  Define a Read Filter class implementing \PhpOffice\PhpSpreadsheet\Reader\IReadFilter  */
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter
+/**  Define a Read Filter class implementing \Wya\PhpSpreadsheet\Reader\IReadFilter  */
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter
 {
     public function readCell($column, $row, $worksheetName = '') {
         //  Read rows 1 to 7 and columns A to E only
@@ -271,7 +271,7 @@ class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter
 $filterSubset = new MyReadFilter();
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Tell the Reader that we want to use the Read Filter  **/
 $reader->setReadFilter($filterSubset);
 /**  Load only the rows and columns that match our filter to Spreadsheet  **/
@@ -287,8 +287,8 @@ A1:E7 from your worksheet. A generic Read Filter would probably be more
 useful:
 
 ``` php
-/**  Define a Read Filter class implementing \PhpOffice\PhpSpreadsheet\Reader\IReadFilter  */
-class MyReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter
+/**  Define a Read Filter class implementing \Wya\PhpSpreadsheet\Reader\IReadFilter  */
+class MyReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter
 {
     private $startRow = 0;
     private $endRow   = 0;
@@ -328,8 +328,8 @@ database.
 $inputFileType = 'Xls';
 $inputFileName = './sampleData/example2.xls';
 
-/**  Define a Read Filter class implementing \PhpOffice\PhpSpreadsheet\Reader\IReadFilter  */
-class ChunkReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter
+/**  Define a Read Filter class implementing \Wya\PhpSpreadsheet\Reader\IReadFilter  */
+class ChunkReadFilter implements \Wya\PhpSpreadsheet\Reader\IReadFilter
 {
     private $startRow = 0;
     private $endRow   = 0;
@@ -350,7 +350,7 @@ class ChunkReadFilter implements \PhpOffice\PhpSpreadsheet\Reader\IReadFilter
 }
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 
 /**  Define how many rows we want to read for each "chunk"  **/
 $chunkSize = 2048;
@@ -402,7 +402,7 @@ $inputFileNames = [
 ];
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 
 /**  Extract the first named file from the array list  **/
 $inputFileName = array_shift($inputFileNames);
@@ -458,7 +458,7 @@ $inputFileName = './sampleData/example2.csv';
 
 echo 'Loading file ',pathinfo($inputFileName,PATHINFO_BASENAME),' using IOFactory with a defined reader type of ',$inputFileType,'<br />';
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 
 /**  Define how many rows we want to read for each "chunk"  **/
 $chunkSize = 65530;
@@ -472,7 +472,7 @@ $reader->setReadFilter($chunkFilter)
     ->setContiguous(true);
 
 /**  Instantiate a new Spreadsheet object manually  **/
-$spreadsheet = new \PhpOffice\PhpSpreadsheet\Spreadsheet();
+$spreadsheet = new \Wya\PhpSpreadsheet\Spreadsheet();
 
 /**  Set a sheet index  **/
 $sheet = 0;
@@ -528,7 +528,7 @@ $inputFileType = 'Csv';
 $inputFileName = './sampleData/example1.tsv';
 
 /**  Create a new Reader of the type defined in $inputFileType  **/
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 /**  Set the delimiter to a TAB character  **/
 $reader->setDelimiter("\t");
 //    $reader->setDelimiter('|');
@@ -568,8 +568,8 @@ However, you can apply additional processing that is executed against
 these values during the load process within a Value Binder.
 
 A Value Binder is a class that implement the
-`\PhpOffice\PhpSpreadsheet\Cell\IValueBinder` interface. It must contain a
-`bindValue()` method that accepts a `\PhpOffice\PhpSpreadsheet\Cell\Cell` and a
+`\Wya\PhpSpreadsheet\Cell\IValueBinder` interface. It must contain a
+`bindValue()` method that accepts a `\Wya\PhpSpreadsheet\Cell\Cell` and a
 value as arguments, and return a boolean `true` or `false` that indicates
 whether the workbook cell has been populated with the value or not. The
 Advanced Value Binder implements such a class: amongst other tests, it
@@ -587,12 +587,12 @@ loader logic when reading unformatted text files.
 
 ``` php
 /**  Tell PhpSpreadsheet that we want to use the Advanced Value Binder  **/
-\PhpOffice\PhpSpreadsheet\Cell\Cell::setValueBinder( new \PhpOffice\PhpSpreadsheet\Cell\AdvancedValueBinder() );
+\Wya\PhpSpreadsheet\Cell\Cell::setValueBinder( new \Wya\PhpSpreadsheet\Cell\AdvancedValueBinder() );
 
 $inputFileType = 'Csv';
 $inputFileName = './sampleData/example1.tsv';
 
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 $reader->setDelimiter("\t");
 $spreadsheet = $reader->load($inputFileName);
 ```
@@ -617,15 +617,15 @@ any problems that are encountered, and deal with them in an appropriate
 manner.
 
 The PhpSpreadsheet Readers throw a
-`\PhpOffice\PhpSpreadsheet\Reader\Exception`.
+`\Wya\PhpSpreadsheet\Reader\Exception`.
 
 ``` php
 $inputFileName = './sampleData/example-1.xls';
 
 try {
     /** Load $inputFileName to a Spreadsheet Object  **/
-    $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileName);
-} catch(\PhpOffice\PhpSpreadsheet\Reader\Exception $e) {
+    $spreadsheet = \Wya\PhpSpreadsheet\IOFactory::load($inputFileName);
+} catch(\Wya\PhpSpreadsheet\Reader\Exception $e) {
     die('Error loading file: '.$e->getMessage());
 }
 ```
@@ -647,7 +647,7 @@ The `listWorksheetNames()` method returns a simple array listing each
 worksheet name within the workbook:
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 
 $worksheetNames = $reader->listWorksheetNames($inputFileName);
 
@@ -668,7 +668,7 @@ The `listWorksheetInfo()` method returns a nested array, with each entry
 listing the name and dimensions for a worksheet:
 
 ``` php
-$reader = \PhpOffice\PhpSpreadsheet\IOFactory::createReader($inputFileType);
+$reader = \Wya\PhpSpreadsheet\IOFactory::createReader($inputFileType);
 
 $worksheetData = $reader->listWorksheetInfo($inputFileName);
 

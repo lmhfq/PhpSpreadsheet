@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Document;
+namespace Wya\PhpSpreadsheet\Document;
 
 class Properties
 {

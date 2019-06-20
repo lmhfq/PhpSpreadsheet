@@ -1,12 +1,12 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Settings;
 
 require __DIR__ . '/../Header.php';
 
 // Change these values to select the Rendering library that you wish to use
-Settings::setChartRenderer(\PhpOffice\PhpSpreadsheet\Chart\Renderer\JpGraph::class);
+Settings::setChartRenderer(\Wya\PhpSpreadsheet\Chart\Renderer\JpGraph::class);
 
 $inputFileType = 'Xlsx';
 $inputFileNames = __DIR__ . '/../templates/36write*.xlsx';

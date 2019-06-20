@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Style;
+namespace Wya\PhpSpreadsheet\Style;
 
-use PhpOffice\PhpSpreadsheet\IComparable;
+use Wya\PhpSpreadsheet\IComparable;
 
 class Conditional implements IComparable
 {

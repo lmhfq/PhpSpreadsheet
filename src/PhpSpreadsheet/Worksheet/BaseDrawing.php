@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Worksheet;
+namespace Wya\PhpSpreadsheet\Worksheet;
 
-use PhpOffice\PhpSpreadsheet\Cell\Hyperlink;
-use PhpOffice\PhpSpreadsheet\Exception as PhpSpreadsheetException;
-use PhpOffice\PhpSpreadsheet\IComparable;
+use Wya\PhpSpreadsheet\Cell\Hyperlink;
+use Wya\PhpSpreadsheet\Exception as PhpSpreadsheetException;
+use Wya\PhpSpreadsheet\IComparable;
 
 class BaseDrawing implements IComparable
 {
@@ -210,13 +210,13 @@ class BaseDrawing implements IComparable
     public function setWorksheet(Worksheet $pValue = null, $pOverrideOld = false)
     {
         if ($this->worksheet === null) {
-            // Add drawing to \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+            // Add drawing to \Wya\PhpSpreadsheet\Worksheet\Worksheet
             $this->worksheet = $pValue;
             $this->worksheet->getCell($this->coordinates);
             $this->worksheet->getDrawingCollection()->append($this);
         } else {
             if ($pOverrideOld) {
-                // Remove drawing from old \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+                // Remove drawing from old \Wya\PhpSpreadsheet\Worksheet\Worksheet
                 $iterator = $this->worksheet->getDrawingCollection()->getIterator();
 
                 while ($iterator->valid()) {
@@ -228,10 +228,10 @@ class BaseDrawing implements IComparable
                     }
                 }
 
-                // Set new \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+                // Set new \Wya\PhpSpreadsheet\Worksheet\Worksheet
                 $this->setWorksheet($pValue);
             } else {
-                throw new PhpSpreadsheetException('A Worksheet has already been assigned. Drawings can only exist on one \\PhpOffice\\PhpSpreadsheet\\Worksheet.');
+                throw new PhpSpreadsheetException('A Worksheet has already been assigned. Drawings can only exist on one \\Wya\\PhpSpreadsheet\\Worksheet.');
             }
         }
 

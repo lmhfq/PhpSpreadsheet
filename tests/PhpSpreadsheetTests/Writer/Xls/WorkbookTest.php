@@ -1,10 +1,10 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Writer\Xls\Workbook;
+namespace Wya\PhpSpreadsheetTests\Writer\Xls\Workbook;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xls\Parser;
-use PhpOffice\PhpSpreadsheet\Writer\Xls\Workbook;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Writer\Xls\Parser;
+use Wya\PhpSpreadsheet\Writer\Xls\Workbook;
 use PHPUnit\Framework\TestCase;
 
 class WorkbookTest extends TestCase

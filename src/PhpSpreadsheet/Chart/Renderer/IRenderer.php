@@ -1,15 +1,15 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Chart\Renderer;
+namespace Wya\PhpSpreadsheet\Chart\Renderer;
 
-use PhpOffice\PhpSpreadsheet\Chart\Chart;
+use Wya\PhpSpreadsheet\Chart\Chart;
 
 interface IRenderer
 {
     /**
      * IRenderer constructor.
      *
-     * @param \PhpOffice\PhpSpreadsheet\Chart\Chart $chart
+     * @param \Wya\PhpSpreadsheet\Chart\Chart $chart
      */
     public function __construct(Chart $chart);
 

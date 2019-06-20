@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Cell;
+namespace Wya\PhpSpreadsheetTests\Cell;
 
-use PhpOffice\PhpSpreadsheet\Cell\Hyperlink;
+use Wya\PhpSpreadsheet\Cell\Hyperlink;
 use PHPUnit\Framework\TestCase;
 
 class HyperlinkTest extends TestCase
@@ -20,7 +20,7 @@ class HyperlinkTest extends TestCase
     public function testSetUrl()
     {
         $initialUrlValue = 'https://www.example.com';
-        $newUrlValue = 'http://github.com/PHPOffice/PhpSpreadsheet';
+        $newUrlValue = 'http://github.com/Wya/PhpSpreadsheet';
 
         $testInstance = new Hyperlink($initialUrlValue);
         $result = $testInstance->setUrl($newUrlValue);

@@ -1,29 +1,29 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer;
+namespace Wya\PhpSpreadsheet\Writer;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Calculation;
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\Chart\Chart;
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
-use PhpOffice\PhpSpreadsheet\RichText\Run;
-use PhpOffice\PhpSpreadsheet\Shared\Drawing as SharedDrawing;
-use PhpOffice\PhpSpreadsheet\Shared\File;
-use PhpOffice\PhpSpreadsheet\Shared\Font as SharedFont;
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Border;
-use PhpOffice\PhpSpreadsheet\Style\Borders;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Font;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
-use PhpOffice\PhpSpreadsheet\Style\Style;
-use PhpOffice\PhpSpreadsheet\Worksheet\Drawing;
-use PhpOffice\PhpSpreadsheet\Worksheet\MemoryDrawing;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
-use PhpOffice\PhpSpreadsheet\Writer\Exception as WriterException;
+use Wya\PhpSpreadsheet\Calculation\Calculation;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\Chart\Chart;
+use Wya\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\RichText\Run;
+use Wya\PhpSpreadsheet\Shared\Drawing as SharedDrawing;
+use Wya\PhpSpreadsheet\Shared\File;
+use Wya\PhpSpreadsheet\Shared\Font as SharedFont;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Alignment;
+use Wya\PhpSpreadsheet\Style\Border;
+use Wya\PhpSpreadsheet\Style\Borders;
+use Wya\PhpSpreadsheet\Style\Fill;
+use Wya\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Style\Style;
+use Wya\PhpSpreadsheet\Worksheet\Drawing;
+use Wya\PhpSpreadsheet\Worksheet\MemoryDrawing;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Writer\Exception as WriterException;
 
 class Html extends BaseWriter
 {
@@ -350,7 +350,7 @@ class Html extends BaseWriter
         $html .= '<html>' . PHP_EOL;
         $html .= '  <head>' . PHP_EOL;
         $html .= '      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">' . PHP_EOL;
-        $html .= '      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">' . PHP_EOL;
+        $html .= '      <meta name="generator" content="PhpSpreadsheet, https://github.com/Wya/PhpSpreadsheet">' . PHP_EOL;
         if ($properties->getTitle() > '') {
             $html .= '      <title>' . htmlspecialchars($properties->getTitle()) . '</title>' . PHP_EOL;
         }
@@ -605,7 +605,7 @@ class Html extends BaseWriter
     /**
      * Generate image tag in cell.
      *
-     * @param Worksheet $pSheet \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+     * @param Worksheet $pSheet \Wya\PhpSpreadsheet\Worksheet\Worksheet
      * @param string $coordinates Cell coordinates
      *
      * @return string
@@ -686,7 +686,7 @@ class Html extends BaseWriter
     /**
      * Generate chart tag in cell.
      *
-     * @param Worksheet $pSheet \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+     * @param Worksheet $pSheet \Wya\PhpSpreadsheet\Worksheet\Worksheet
      * @param string $coordinates Cell coordinates
      *
      * @return string
@@ -962,9 +962,9 @@ class Html extends BaseWriter
     }
 
     /**
-     * Create CSS style (\PhpOffice\PhpSpreadsheet\Style\Alignment).
+     * Create CSS style (\Wya\PhpSpreadsheet\Style\Alignment).
      *
-     * @param Alignment $pStyle \PhpOffice\PhpSpreadsheet\Style\Alignment
+     * @param Alignment $pStyle \Wya\PhpSpreadsheet\Style\Alignment
      *
      * @return array
      */
@@ -986,7 +986,7 @@ class Html extends BaseWriter
     }
 
     /**
-     * Create CSS style (\PhpOffice\PhpSpreadsheet\Style\Font).
+     * Create CSS style (\Wya\PhpSpreadsheet\Style\Font).
      *
      * @param Font $pStyle
      *
@@ -1149,7 +1149,7 @@ class Html extends BaseWriter
     /**
      * Generate row.
      *
-     * @param Worksheet $pSheet \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet
+     * @param Worksheet $pSheet \Wya\PhpSpreadsheet\Worksheet\Worksheet
      * @param array $pValues Array containing cells in a row
      * @param int $pRow Row number (0-based)
      * @param string $cellType eg: 'td'
@@ -1340,7 +1340,7 @@ class Html extends BaseWriter
                 if (!$this->useInlineCss) {
                     $html .= ' class="' . $cssClass . '"';
                 } else {
-                    //** Necessary redundant code for the sake of \PhpOffice\PhpSpreadsheet\Writer\Pdf **
+                    //** Necessary redundant code for the sake of \Wya\PhpSpreadsheet\Writer\Pdf **
                     // We must explicitly write the width of the <td> element because TCPDF
                     // does not recognize e.g. <col style="width:42pt">
                     $width = 0;

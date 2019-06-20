@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Helper;
+namespace Wya\PhpSpreadsheetTests\Helper;
 
-use PhpOffice\PhpSpreadsheet\Helper\Sample;
+use Wya\PhpSpreadsheet\Helper\Sample;
 use PHPUnit\Framework\TestCase;
 
 class SampleTest extends TestCase

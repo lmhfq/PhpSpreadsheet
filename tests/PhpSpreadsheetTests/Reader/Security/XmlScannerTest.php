@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader\Security;
+namespace Wya\PhpSpreadsheetTests\Reader\Security;
 
-use PhpOffice\PhpSpreadsheet\Reader\Security\XmlScanner;
-use PhpOffice\PhpSpreadsheet\Reader\Xls;
-use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
-use PhpOffice\PhpSpreadsheet\Reader\Xml;
+use Wya\PhpSpreadsheet\Reader\Security\XmlScanner;
+use Wya\PhpSpreadsheet\Reader\Xls;
+use Wya\PhpSpreadsheet\Reader\Xlsx;
+use Wya\PhpSpreadsheet\Reader\Xml;
 use PHPUnit\Framework\TestCase;
 
 class XmlScannerTest extends TestCase
@@ -21,7 +21,7 @@ class XmlScannerTest extends TestCase
     {
         libxml_disable_entity_loader($libxmlDisableEntityLoader);
 
-        $reader = XmlScanner::getInstance(new \PhpOffice\PhpSpreadsheet\Reader\Xml());
+        $reader = XmlScanner::getInstance(new \Wya\PhpSpreadsheet\Reader\Xml());
         $result = $reader->scanFile($filename);
         self::assertEquals($expectedResult, $result);
         self::assertEquals($libxmlDisableEntityLoader, libxml_disable_entity_loader());
@@ -48,11 +48,11 @@ class XmlScannerTest extends TestCase
      */
     public function testInvalidXML($filename, $libxmlDisableEntityLoader)
     {
-        $this->expectException(\PhpOffice\PhpSpreadsheet\Reader\Exception::class);
+        $this->expectException(\Wya\PhpSpreadsheet\Reader\Exception::class);
 
         libxml_disable_entity_loader($libxmlDisableEntityLoader);
 
-        $reader = XmlScanner::getInstance(new \PhpOffice\PhpSpreadsheet\Reader\Xml());
+        $reader = XmlScanner::getInstance(new \Wya\PhpSpreadsheet\Reader\Xml());
         $expectedResult = 'FAILURE: Should throw an Exception rather than return a value';
         $result = $reader->scanFile($filename);
         self::assertEquals($expectedResult, $result);

@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Pdf;
+namespace Wya\PhpSpreadsheet\Writer\Pdf;
 
-use PhpOffice\PhpSpreadsheet\Worksheet\PageSetup;
-use PhpOffice\PhpSpreadsheet\Writer\Pdf;
+use Wya\PhpSpreadsheet\Worksheet\PageSetup;
+use Wya\PhpSpreadsheet\Writer\Pdf;
 
 class Tcpdf extends Pdf
 {
@@ -26,7 +26,7 @@ class Tcpdf extends Pdf
      *
      * @param string $pFilename Name of the file to save as
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      */
     public function save($pFilename)
     {

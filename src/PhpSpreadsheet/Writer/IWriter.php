@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer;
+namespace Wya\PhpSpreadsheet\Writer;
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 interface IWriter
 {
@@ -18,7 +18,7 @@ interface IWriter
      *
      * @param string $pFilename Name of the file to save
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Writer\Exception
+     * @throws \Wya\PhpSpreadsheet\Writer\Exception
      */
     public function save($pFilename);
 }

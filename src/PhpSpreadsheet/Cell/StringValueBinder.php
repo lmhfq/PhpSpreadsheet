@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Cell;
+namespace Wya\PhpSpreadsheet\Cell;
 
-use PhpOffice\PhpSpreadsheet\Shared\StringHelper;
+use Wya\PhpSpreadsheet\Shared\StringHelper;
 
 class StringValueBinder implements IValueBinder
 {
@@ -12,7 +12,7 @@ class StringValueBinder implements IValueBinder
      * @param Cell $cell Cell to bind value to
      * @param mixed $value Value to bind in cell
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Exception
+     * @throws \Wya\PhpSpreadsheet\Exception
      *
      * @return bool
      */

@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests;
+namespace Wya\PhpSpreadsheetTests;
 
-use PhpOffice\PhpSpreadsheet\Settings;
+use Wya\PhpSpreadsheet\Settings;
 use PHPUnit\Framework\TestCase;
 
 class SettingsTest extends TestCase

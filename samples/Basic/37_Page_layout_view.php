@@ -1,7 +1,7 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\SheetView;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\SheetView;
 
 require __DIR__ . '/../Header.php';
 
@@ -11,8 +11,8 @@ $spreadsheet = new Spreadsheet();
 
 // Set document properties
 $helper->log('Set document properties');
-$spreadsheet->getProperties()->setCreator('PHPOffice')
-    ->setLastModifiedBy('PHPOffice')
+$spreadsheet->getProperties()->setCreator('Wya')
+    ->setLastModifiedBy('Wya')
     ->setTitle('PhpSpreadsheet Test Document')
     ->setSubject('PhpSpreadsheet Test Document')
     ->setDescription('Test document for PhpSpreadsheet, generated using PHP classes.')

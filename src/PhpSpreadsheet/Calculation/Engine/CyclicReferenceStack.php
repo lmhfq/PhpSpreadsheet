@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Calculation\Engine;
+namespace Wya\PhpSpreadsheet\Calculation\Engine;
 
 class CyclicReferenceStack
 {

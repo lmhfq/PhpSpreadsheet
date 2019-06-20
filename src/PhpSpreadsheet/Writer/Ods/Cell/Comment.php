@@ -1,14 +1,14 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Writer\Ods\Cell;
+namespace Wya\PhpSpreadsheet\Writer\Ods\Cell;
 
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Shared\XMLWriter;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Shared\XMLWriter;
 
 /**
  * @category   PhpSpreadsheet
  *
- * @copyright  Copyright (c) 2006 - 2015 PhpSpreadsheet (https://github.com/PHPOffice/PhpSpreadsheet)
+ * @copyright  Copyright (c) 2006 - 2015 PhpSpreadsheet (https://github.com/Wya/PhpSpreadsheet)
  * @author     Alexander Pervakov <frost-nzcr4@jagmort.com>
  */
 class Comment

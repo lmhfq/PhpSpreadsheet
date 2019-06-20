@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests;
+namespace Wya\PhpSpreadsheetTests;
 
-use PhpOffice\PhpSpreadsheet\ReferenceHelper;
+use Wya\PhpSpreadsheet\ReferenceHelper;
 use PHPUnit\Framework\TestCase;
 
 class ReferenceHelperTest extends TestCase

@@ -1,9 +1,9 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\HeaderFooter;
-use PhpOffice\PhpSpreadsheet\Worksheet\HeaderFooterDrawing;
-use PhpOffice\PhpSpreadsheet\Worksheet\PageSetup;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\HeaderFooter;
+use Wya\PhpSpreadsheet\Worksheet\HeaderFooterDrawing;
+use Wya\PhpSpreadsheet\Worksheet\PageSetup;
 
 require __DIR__ . '/../Header.php';
 

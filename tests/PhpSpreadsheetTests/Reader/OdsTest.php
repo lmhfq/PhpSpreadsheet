@@ -1,11 +1,11 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Reader;
+namespace Wya\PhpSpreadsheetTests\Reader;
 
-use PhpOffice\PhpSpreadsheet\Cell\DataType;
-use PhpOffice\PhpSpreadsheet\Reader\Ods;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Style\Font;
+use Wya\PhpSpreadsheet\Cell\DataType;
+use Wya\PhpSpreadsheet\Reader\Ods;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Style\Font;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -74,15 +74,15 @@ class OdsTest extends TestCase
     {
         $spreadsheet = $this->loadDataFile();
 
-        self::assertInstanceOf('PhpOffice\PhpSpreadsheet\Spreadsheet', $spreadsheet);
+        self::assertInstanceOf('Wya\PhpSpreadsheet\Spreadsheet', $spreadsheet);
 
         self::assertEquals(2, $spreadsheet->getSheetCount());
 
         $firstSheet = $spreadsheet->getSheet(0);
-        self::assertInstanceOf('PhpOffice\PhpSpreadsheet\Worksheet\Worksheet', $firstSheet);
+        self::assertInstanceOf('Wya\PhpSpreadsheet\Worksheet\Worksheet', $firstSheet);
 
         $secondSheet = $spreadsheet->getSheet(1);
-        self::assertInstanceOf('PhpOffice\PhpSpreadsheet\Worksheet\Worksheet', $secondSheet);
+        self::assertInstanceOf('Wya\PhpSpreadsheet\Worksheet\Worksheet', $secondSheet);
     }
 
     public function testReadValueAndComments()
@@ -196,7 +196,7 @@ class OdsTest extends TestCase
 
         self::assertEquals(DataType::TYPE_STRING, $hyperlink->getDataType());
         self::assertEquals('PhpSpreadsheet', $hyperlink->getValue());
-        self::assertEquals('https://github.com/PHPOffice/phpspreadsheet', $hyperlink->getHyperlink()->getUrl());
+        self::assertEquals('https://github.com/Wya/phpspreadsheet', $hyperlink->getHyperlink()->getUrl());
     }
 
     // Below some test for features not implemented yet

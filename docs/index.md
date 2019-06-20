@@ -41,7 +41,7 @@ Support for PHP versions will only be maintained for a period of six months beyo
 Use [composer](https://getcomposer.org) to install PhpSpreadsheet into your project:
 
 ```sh
-composer require phpoffice/phpspreadsheet
+composer require Wya/phpspreadsheet
 ```
 
 ## Hello World
@@ -53,8 +53,8 @@ This would be the simplest way to write a spreadsheet:
 
 require 'vendor/autoload.php';
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Writer\Xlsx;
 
 $spreadsheet = new Spreadsheet();
 $sheet = $spreadsheet->getActiveSheet();
@@ -70,7 +70,7 @@ A good way to get started is to run some of the samples. Serve the samples via
 PHP built-in webserver:
 
 ```sh
-php -S localhost:8000 -t vendor/phpoffice/phpspreadsheet/samples
+php -S localhost:8000 -t vendor/Wya/phpspreadsheet/samples
 ```
 
 Then point your browser to:
@@ -80,7 +80,7 @@ Then point your browser to:
 The samples may also be run directly from the command line, for example:
 
 ```sh
-php vendor/phpoffice/phpspreadsheet/samples/Basic/01_Simple.php
+php vendor/Wya/phpspreadsheet/samples/Basic/01_Simple.php
 ```
 
 ## Learn by documentation
@@ -92,10 +92,10 @@ architecture](./topics/architecture.md),
 [accessing cells](./topics/accessing-cells.md) and
 [reading and writing to files](./topics/reading-and-writing-to-file.md).
 
-Or browse the [API documentation](https://phpoffice.github.io/PhpSpreadsheet/master).
+Or browse the [API documentation](https://Wya.github.io/PhpSpreadsheet/master).
 
 # Credits
 
 Please refer to the [contributor
-list](https://github.com/PHPOffice/PhpSpreadsheet/graphs/contributors)
+list](https://github.com/Wya/PhpSpreadsheet/graphs/contributors)
 for up-to-date credits.

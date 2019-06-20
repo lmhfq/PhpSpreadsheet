@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheetTests\Helper;
+namespace Wya\PhpSpreadsheetTests\Helper;
 
-use PhpOffice\PhpSpreadsheet\Helper\Migrator;
+use Wya\PhpSpreadsheet\Helper\Migrator;
 use PHPUnit\Framework\TestCase;
 
 class MigratorTest extends TestCase
@@ -56,28 +56,28 @@ STRING;
 
 namespace Foo;
 
-use \PhpOffice\PhpSpreadsheet\Spreadsheet;
-use \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use \Wya\PhpSpreadsheet\Spreadsheet;
+use \Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 class Bar
 {
     /**
-     * @param \PhpOffice\PhpSpreadsheet\Spreadsheet $workbook
-     * @param \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet
+     * @param \Wya\PhpSpreadsheet\Spreadsheet $workbook
+     * @param \Wya\PhpSpreadsheet\Worksheet\Worksheet $sheet
      *
      * @return string
      */
-    public function baz(\PhpOffice\PhpSpreadsheet\Spreadsheet $workbook, \PhpOffice\PhpSpreadsheet\Worksheet\Worksheet $sheet)
+    public function baz(\Wya\PhpSpreadsheet\Spreadsheet $workbook, \Wya\PhpSpreadsheet\Worksheet\Worksheet $sheet)
     {
-        \PhpOffice\PhpSpreadsheet\Spreadsheet::class;
-        \PhpOffice\PhpSpreadsheet\Spreadsheet::class;
+        \Wya\PhpSpreadsheet\Spreadsheet::class;
+        \Wya\PhpSpreadsheet\Spreadsheet::class;
         $PHPExcel->do();
         $fooobjPHPExcel->do();
         $objPHPExcel->do();
         $this->objPHPExcel->do();
         $this->PHPExcel->do();
 
-        return \PhpOffice\PhpSpreadsheet\Cell\Coordinate::stringFromColumnIndex(9);
+        return \Wya\PhpSpreadsheet\Cell\Coordinate::stringFromColumnIndex(9);
     }
 }
 STRING;

@@ -1,7 +1,7 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Wya\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\Writer\Xlsx;
 
 require __DIR__ . '/../Header.php';
 

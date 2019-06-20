@@ -1,9 +1,9 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Chart\Renderer;
+namespace Wya\PhpSpreadsheet\Chart\Renderer;
 
-use PhpOffice\PhpSpreadsheet\Chart\Chart;
-use PhpOffice\PhpSpreadsheet\Style\NumberFormat;
+use Wya\PhpSpreadsheet\Chart\Chart;
+use Wya\PhpSpreadsheet\Style\NumberFormat;
 
 require_once __DIR__ . '/Polyfill.php';
 

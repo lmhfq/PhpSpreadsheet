@@ -1,8 +1,8 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet;
+namespace Wya\PhpSpreadsheet;
 
-use PhpOffice\PhpSpreadsheet\RichText\RichText;
+use Wya\PhpSpreadsheet\RichText\RichText;
 
 class Comment implements IComparable
 {

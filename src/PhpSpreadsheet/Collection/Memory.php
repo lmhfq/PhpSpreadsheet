@@ -1,6 +1,6 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Collection;
+namespace Wya\PhpSpreadsheet\Collection;
 
 use Psr\SimpleCache\CacheInterface;
 
