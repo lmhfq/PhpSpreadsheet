@@ -1,16 +1,16 @@
 <?php
 
-namespace PhpOffice\PhpSpreadsheet\Calculation;
+namespace Wya\PhpSpreadsheet\Calculation;
 
-use PhpOffice\PhpSpreadsheet\Calculation\Engine\CyclicReferenceStack;
-use PhpOffice\PhpSpreadsheet\Calculation\Engine\Logger;
-use PhpOffice\PhpSpreadsheet\Calculation\Token\Stack;
-use PhpOffice\PhpSpreadsheet\Cell\Cell;
-use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
-use PhpOffice\PhpSpreadsheet\NamedRange;
-use PhpOffice\PhpSpreadsheet\Shared;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
+use Wya\PhpSpreadsheet\Calculation\Engine\CyclicReferenceStack;
+use Wya\PhpSpreadsheet\Calculation\Engine\Logger;
+use Wya\PhpSpreadsheet\Calculation\Token\Stack;
+use Wya\PhpSpreadsheet\Cell\Cell;
+use Wya\PhpSpreadsheet\Cell\Coordinate;
+use Wya\PhpSpreadsheet\NamedRange;
+use Wya\PhpSpreadsheet\Shared;
+use Wya\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Worksheet\Worksheet;
 
 class Calculation
 {
@@ -2708,7 +2708,7 @@ class Calculation
      * @param Cell $pCell Cell to calculate
      * @param bool $resetLog Flag indicating whether the debug log should be reset or not
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Exception
+     * @throws \Wya\PhpSpreadsheet\Exception
      *
      * @return mixed
      */
@@ -2812,7 +2812,7 @@ class Calculation
      * @param string $cellID Address of the cell to calculate
      * @param Cell $pCell Cell to calculate
      *
-     * @throws \PhpOffice\PhpSpreadsheet\Exception
+     * @throws \Wya\PhpSpreadsheet\Exception
      *
      * @return mixed
      */
@@ -3290,7 +3290,7 @@ class Calculation
 
     /**
      * @param string $formula
-     * @param null|\PhpOffice\PhpSpreadsheet\Cell\Cell $pCell
+     * @param null|\Wya\PhpSpreadsheet\Cell\Cell $pCell
      *
      * @return bool
      */

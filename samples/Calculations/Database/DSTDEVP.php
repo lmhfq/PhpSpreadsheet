@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../../Header.php';
 $helper->log('Calculates the standard deviation based on the entire population of selected database entries.');

@@ -76,12 +76,12 @@
     },
     "autoload": {
         "psr-4": {
-            "PhpOffice\\PhpSpreadsheet\\": "src/PhpSpreadsheet"
+            "Wya\\PhpSpreadsheet\\": "src/PhpSpreadsheet"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PhpOffice\\PhpSpreadsheetTests\\": "tests/PhpSpreadsheetTests"
+            "Wya\\PhpSpreadsheetTests\\": "tests/PhpSpreadsheetTests"
         }
     }
 }

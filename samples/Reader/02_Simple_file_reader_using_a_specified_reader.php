@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Reader\Xls;
+use Wya\PhpSpreadsheet\Reader\Xls;
 
 require __DIR__ . '/../Header.php';
 $inputFileName = __DIR__ . '/sampleData/example1.xls';

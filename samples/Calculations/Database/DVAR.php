@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../../Header.php';
 $helper->log('Estimates variance based on a sample from selected database entries.');

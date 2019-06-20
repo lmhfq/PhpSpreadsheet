@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use Wya\PhpSpreadsheet\Spreadsheet;
 
 require __DIR__ . '/../../Header.php';
 $helper->log('Counts the cells that contain numbers in a database.');

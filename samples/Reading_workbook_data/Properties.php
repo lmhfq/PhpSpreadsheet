@@ -1,6 +1,6 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\IOFactory;
+use Wya\PhpSpreadsheet\IOFactory;
 
 require __DIR__ . '/../Header.php';
 
@@ -61,4 +61,4 @@ $helper->log('<b>Company: </b>' . $company);
 // Read the workbook manager property
 $manager = $spreadsheet->getProperties()->getManager();
 $helper->log('<b>Manager: </b>' . $manager);
-$s = new \PhpOffice\PhpSpreadsheet\Helper\Sample();
+$s = new \Wya\PhpSpreadsheet\Helper\Sample();
